@@ -1,0 +1,892 @@
+.ac_results {
+	padding: 0 0 0 0;	
+	background-color: #dadada;
+	/*border: 1px solid #119621;*/
+	border-bottom: solid 1px Gray;
+	border-left:solid 1px Gray;
+	border-right:solid 1px Gray;
+	z-index:1001;
+	overflow:visible;
+	position:absolute;
+	margin-top: 0px;
+}
+
+.ac_results ul {
+	width: 100%;
+	list-style-position: outside;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	overflow:visible;
+}
+.ac_results ul em {
+	font-weight: bold;
+	font-style:normal;
+	/*color: #FF0068;*/
+	color:Red;
+}
+.ac_results li {
+	margin: 0px;
+	padding: 2px 5px;
+	cursor: pointer;
+	display: block;
+	/* 
+	if width will be 100% horizontal scrollbar will apear 
+	when scroll mode will be used
+	*/
+	/*width: 100%;*/
+	font-size: 13px;
+	/* 
+	it is very important, if line-height not setted or setted 
+	in relative units scroll will be broken in firefox
+	*/
+	line-height: 130%;
+	overflow:visible;
+	text-align:left;
+}
+
+.ac_loading {
+	background : Window url('indicator.gif') right center no-repeat;
+}
+
+.ac_over {
+	background-color: #e7e7e7;
+	color: #000000;
+}
+
+.ac_moreItems {
+	text-align: center;
+	background-color: InactiveCaption;
+	color: InactiveCaptionText;
+	margin: 0px;
+	padding: 0px 5px;
+	cursor: default;
+	display: block;
+	width: 100%;
+	font-family:Tahoma;
+	font: bold menu 12px;
+	overflow: hidden;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+}
+/* ************************************** */
+div#CafeF_StockSymbolSlideTable_Container
+{
+	font-family:Arial,Helvetica,sans-serif;
+	width: 972px;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+table#CafeF_StockSymbolSlideTable
+{
+	background-color: #fff;
+	width: 100%;
+}
+div#CafeF_StockSymbolSlideTable_Container td
+{
+	border-top: 1px solid #C4C4C4;
+	border-bottom: 1px solid #C4C4C4;
+}
+div#CafeF_StockSymbolSlideTable_Container td.Left_Right 
+{
+	border: none;
+	width: 6px;
+	background-color: rgb(218, 218, 218);
+}
+div#CafeF_StockSymbolSlideTable_Container .Button
+{
+    cursor: hand;
+    cursor: pointer;
+    text-align: center;
+    width: 18px;
+}
+div#CafeF_StockSymbolSlideTable_Container img
+{
+	border:0;
+    cursor: hand;
+    cursor: pointer;
+	vertical-align:baseline;
+}
+div#CafeF_StockSymbolSlideTable_Container div.FloatLeft
+{
+	overflow:hidden;
+	float:left;
+	margin-left: 3px;
+}
+div#CafeF_StockSymbolSlideTable_Container div.FloatRight
+{
+	overflow:hidden;
+	float:right;
+	font-size:10px;
+	text-align:right;
+	margin-right: 3px;
+}
+div#CafeF_StockSymbolSlideTable_Container td.RightBorder
+{
+	border-right:1px solid #C4C4C4;
+}
+div#CafeF_StockSymbolSlideTable_Container span.Up
+{
+	color:#090;
+}
+div#CafeF_StockSymbolSlideTable_Container span.Down
+{
+	color:#c00;
+}
+div#CafeF_StockSymbolSlideTable_Container span.NoChange
+{
+	color:#D0AD08;
+}
+div#CafeF_StockSymbolSlideTable_Container div.Price
+{
+	color:#666;
+	font-size:12px;
+	font-weight:700;
+	text-align:left;
+}
+div#CafeF_StockSymbolSlideTable_Container div.HiddenText
+{
+	color:#DDD;
+	cursor:pointer;
+	font-size:10px;
+	font-weight:700;
+	text-align:center;
+	width:100%;
+}
+div#CafeF_StockSymbolSlideTable_Container a,
+div#CafeF_StockSymbolSlideTable_Container a:link,
+div#CafeF_StockSymbolSlideTable_Container a:active,
+div#CafeF_StockSymbolSlideTable_Container a:visited
+{
+	color:#003466;
+	font-size:11px;
+	font-weight:700;
+	margin-right:2px;
+	text-decoration:none;
+	padding:0;
+}
+div#CafeF_StockSymbolSlideTable_Container a:hover
+{
+	color:#CB0003;
+	font-size:11px;
+	font-weight:700;
+	margin-right:2px;
+	text-decoration:none;
+	padding:0;
+}
+td#CafeF_StockSymbolSlideTable_Cell0,
+td#CafeF_StockSymbolSlideTable_Cell1,
+td#CafeF_StockSymbolSlideTable_Cell2,
+td#CafeF_StockSymbolSlideTable_Cell3,
+td#CafeF_StockSymbolSlideTable_Cell4,
+td#CafeF_StockSymbolSlideTable_Cell5,
+td#CafeF_StockSymbolSlideTable_Cell6
+{
+    width: 115px;
+    padding: 2px;
+}
+td#CafeF_StockSymbolSlideTable_Cell0 td,
+td#CafeF_StockSymbolSlideTable_Cell1 td,
+td#CafeF_StockSymbolSlideTable_Cell2 td,
+td#CafeF_StockSymbolSlideTable_Cell3 td,
+td#CafeF_StockSymbolSlideTable_Cell4 td,
+td#CafeF_StockSymbolSlideTable_Cell5 td,
+td#CafeF_StockSymbolSlideTable_Cell6 td
+{
+    border: none;
+}
+
+#CafeF_StockSymbolSlidePopup
+{
+    position: absolute; 
+    width: 260px; 
+    height: 300px;
+    z-index: 1000;
+    border: solid 1px #cf0d0e;
+    background-color: #ffffff;
+    display: none;
+    left: 500px;
+}
+#CafeF_StockSymbolSlidePopup .PopupRow
+{
+    overflow: auto;
+    margin: 2px 5px 2px 5px;
+}
+#CafeF_StockSymbolSlidePopupTitle
+{
+    float: left;
+    cursor: move;
+    color:#343434;
+    font-size:12px;
+}
+#CafeF_StockSymbolSlidePopupTitle div
+{
+    overflow: hidden;
+}
+#CafeF_StockSymbolSlidePopupList
+{
+    overflow: auto;
+    font-size: 11px;
+}
+#CafeF_StockSymbolSlidePopupList td
+{
+    font-size: 11px;
+}
+/* ************************************** */
+table.CafeF_RoundCornerBox
+{
+    text-align: left;
+    font-family: Arial;
+    font-size: 12px;
+    background-color: #fff;
+    border: none;
+}
+/* -------------------------------------- */
+table.CafeF_RoundCornerBox tr.Top td.Left
+{
+    text-align: left;
+    width: 4px;
+    vertical-align: top;
+}
+table.CafeF_RoundCornerBox tr.Top td.Right
+{
+    text-align: right;
+    width: 4px;
+    vertical-align: top;
+}
+/* -------------------------------------- */
+table.CafeF_RoundCornerBox tr.Bottom td.Left
+{
+    text-align: left;
+    width: 4px;
+    vertical-align: bottom;
+}
+table.CafeF_RoundCornerBox tr.Bottom td.Right
+{
+    text-align: right;
+    width: 4px;
+    vertical-align: bottom;
+}
+/* -------------------------------------- */
+table.CafeF_RoundCornerBox td.Middle
+{
+    padding: 5px 5px 5px 5px;
+}
+/* -------------------------------------- */
+table.CafeF_RoundCornerBox .Price
+{
+    color: rgb(102, 102, 102);
+    font-weight: bold;
+}
+table.CafeF_RoundCornerBox .Up
+{
+    color: #009933;
+    font-weight: normal;
+}
+table.CafeF_RoundCornerBox .Down
+{
+    color: #cc0000;
+    font-weight: normal;
+}
+table.CafeF_RoundCornerBox .NoChange
+{
+    color: #FF9900;
+    font-weight: normal;
+}
+table.CafeF_RoundCornerBox .Note
+{
+    color: rgb(153, 153, 153);
+    font-size: 11px;
+    font-weight: normal;
+}
+table.CafeF_RoundCornerBox .Title a,
+table.CafeF_RoundCornerBox .Title a:link,
+table.CafeF_RoundCornerBox .Title a:active,
+table.CafeF_RoundCornerBox .Title a:visited
+{
+	color: rgb(51, 51, 51);
+	font-weight: bold;
+	text-decoration: none;
+}
+table.CafeF_RoundCornerBox .Title a:hover
+{
+	color: #cc0000;
+	font-weight: bold;
+	text-decoration: none;
+}
+/* ************************************** */
+table.CafeF_RoundCornerBox table.Cafef_RoundCornerChildBox
+{
+    width: 100%;
+    border: none;
+    background-color: #fff;
+}
+/* -------------------------------------- */
+table.CafeF_RoundCornerBox table.Cafef_RoundCornerChildBox tr.Top td.Title
+{
+    font-weight: bold;
+    border-top: solid 1px #dadada;
+    font-size: 13px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+table.CafeF_RoundCornerBox table.Cafef_RoundCornerChildBox tr.Top td.Left
+{
+    text-align: left;
+    vertical-align: top;
+    width: 9px;
+    vertical-align: top;
+    background-image: url(http://solieu.cafef.channelvn.net/www/cafef/images/gray_dot.gif);
+    background-position: left;
+    background-repeat: repeat-y;
+}
+table.CafeF_RoundCornerBox table.Cafef_RoundCornerChildBox tr.Top td.Right
+{
+    text-align: right;
+    vertical-align: top;
+    width: 9px;
+    vertical-align: top;
+    background-image: url(http://solieu.cafef.channelvn.net/www/cafef/images/gray_dot.gif);
+    background-position: right;
+    background-repeat: repeat-y;
+}
+/* -------------------------------------- */
+table.CafeF_RoundCornerBox table.Cafef_RoundCornerChildBox tr.Bottom td.Center
+{
+    border-bottom: solid 1px #dadada;
+}
+
+table.CafeF_RoundCornerBox table.Cafef_RoundCornerChildBox tr.Bottom td.Left
+{
+    text-align: left;
+    width: 9px;
+    vertical-align: bottom;
+    background-image: url(http://solieu.cafef.channelvn.net/www/cafef/images/gray_dot.gif);
+    background-position: left;
+    background-repeat: repeat-y;
+}
+table.CafeF_RoundCornerBox table.Cafef_RoundCornerChildBox tr.Bottom td.Right
+{
+    text-align: right;
+    width: 9px;
+    vertical-align: bottom;
+    background-image: url(http://solieu.cafef.channelvn.net/www/cafef/images/gray_dot.gif);
+    background-position: right;
+    background-repeat: repeat-y;
+}
+/* -------------------------------------- */
+table.CafeF_RoundCornerBox table.Cafef_RoundCornerChildBox tr.Middle td.Left
+{
+    border-left: solid 1px #dadada;
+    border-top: solid 1px #dadada;
+}
+table.CafeF_RoundCornerBox table.Cafef_RoundCornerChildBox tr.Middle td.Right
+{
+    border-right: solid 1px #dadada;
+    border-top: solid 1px #dadada;
+}
+table.CafeF_RoundCornerBox table.Cafef_RoundCornerChildBox tr.Middle td.Center
+{
+    border-top: solid 1px #dadada;
+}
+table.CafeF_RoundCornerBox table.Cafef_RoundCornerChildBox tr.Middle td.Center_Border
+{
+    border-left: solid 1px #dadada;
+    border-right: solid 1px #dadada;
+}
+/* ********************************************** */
+#CafeF_BangChungKhoanRutGon
+{
+    width: 100%;
+}
+#CafeF_BangChungKhoanRutGon #BriefStockTable
+{
+	width:100%;
+	height:300px;
+	border:0 solid #000;
+	font-size:0.9em;
+	overflow:auto;
+	margin-right:0;
+	float:left;
+	padding:0;
+}
+
+#CafeF_BangChungKhoanRutGon .indx_title
+{
+	font-size:18px;
+	font-family:Arial,Helvetica,Tahoma,Verdana,Times New Roman,SunSans-Regular;
+	font-weight:normal;
+	color:#3d3d3d;
+	text-decoration:none;
+	letter-spacing:0;
+}
+
+#CafeF_BangChungKhoanRutGon .indx_btnon
+{
+	font-size:14px;
+	font-family:Tahoma,Helvetica,Arial,Verdana,Times New Roman,SunSans-Regular;
+	font-weight:normal;
+	color:#C9000F;
+	text-decoration:none;
+	letter-spacing:0;
+	background-image:url(http://solieu.cafef.channelvn.net/www/cafef/images/StockImages/img_btnon1.gif);
+}
+
+#CafeF_BangChungKhoanRutGon .indx_btnon a,#CafeF_BangChungKhoanRutGon .indx_btnon a:active,#CafeF_BangChungKhoanRutGon .indx_btnon a:visited,#CafeF_BangChungKhoanRutGon .indx_btnon a:link,#CafeF_BangChungKhoanRutGon .indx_btnon a:hover
+{
+	font-size:14px;
+	font-family:Tahoma,Helvetica,Arial,Verdana,Times New Roman,SunSans-Regular;
+	font-weight:700;
+	color:#C9000F;
+	text-decoration:none;
+	letter-spacing:0;
+}
+
+#CafeF_BangChungKhoanRutGon .indx_btnoff
+{
+	font-size:14px;
+	font-family:Tahoma,Helvetica,Arial,Verdana,Times New Roman,SunSans-Regular;
+	font-weight:normal;
+	color:#999;
+	text-decoration:none;
+	letter-spacing:0;
+}
+
+#CafeF_BangChungKhoanRutGon .indx_mack
+{
+	font-size:14px;
+	font-family:Tahoma,Helvetica,Arial,Verdana,Times New Roman,SunSans-Regular;
+	font-weight:normal;
+	color:#666;
+	text-decoration:none;
+	letter-spacing:0;
+}
+
+ #CafeF_BangChungKhoanRutGon .style1
+{
+	font-size:14px;
+	font-family:Tahoma,Helvetica,Arial,Verdana,Times New Roman,SunSans-Regular;
+	font-weight:700;
+	color:#999;
+	text-decoration:none;
+	letter-spacing:0;
+	background-image:url(http://solieu.cafef.channelvn.net/www/cafef/images/StockImages/img_btnoff1.gif);
+}
+
+#CafeF_BangChungKhoanRutGon .style1 a,#CafeF_BangChungKhoanRutGon .style1 a:active,.style1 a:visited,.style1 a:link,.style1 a:hover
+{
+	font-size:14px;
+	font-family:Tahoma,Helvetica,Arial,Verdana,Times New Roman,SunSans-Regular;
+	font-weight:700;
+	color:#999;
+	text-decoration:none;
+	letter-spacing:0;
+}
+
+#CafeF_BangChungKhoanRutGon .content
+{
+	font-size:12px;
+	font-family:Arial,Helvetica,Arial,Verdana,Times New Roman,SunSans-Regular;
+	font-weight:normal;
+	color:#004276;
+	text-decoration:none;
+	letter-spacing:0;
+}
+
+#CafeF_BangChungKhoanRutGon .content a,#CafeF_BangChungKhoanRutGon .content a:link,#CafeF_BangChungKhoanRutGon .content a:active,#CafeF_BangChungKhoanRutGon .content a:visited,#CafeF_BangChungKhoanRutGon .content a:hover
+{
+	font-size:12px;
+	font-family:Arial,Helvetica,Arial,Verdana,Times New Roman,SunSans-Regular;
+	font-weight:normal;
+	color:#004276;
+	text-decoration:none;
+	letter-spacing:0;
+	padding:0;
+}
+
+#CafeF_BangChungKhoanRutGon .green
+{
+	font-size:12px;
+	font-family:Arial,Helvetica,Arial,Verdana,Times New Roman,SunSans-Regular;
+	font-weight:normal;
+	color:#093;
+	text-decoration:none;
+	letter-spacing:0;
+}
+
+#CafeF_BangChungKhoanRutGon .red
+{
+	font-size:12px;
+	font-family:Arial,Helvetica,Arial,Verdana,Times New Roman,SunSans-Regular;
+	font-weight:normal;
+	color:#f30;
+	text-decoration:none;
+	letter-spacing:0;
+}
+
+#CafeF_BangChungKhoanRutGon .stc_nochange
+{
+	font-size:12px;
+	font-family:Arial,Helvetica,Arial,Verdana,Times New Roman,SunSans-Regular;
+	font-weight:normal;
+	color:#F90;
+	text-decoration:none;
+	letter-spacing:0;
+}
+
+#CafeF_BangChungKhoanRutGon .gray
+{
+	font-size:11px;
+	font-family:Arial,Helvetica,Arial,Verdana,Times New Roman,SunSans-Regular;
+	font-weight:normal;
+	color:#787878;
+	text-decoration:none;
+	letter-spacing:0;
+}
+
+#CafeF_BangChungKhoanRutGon .grayunderline
+{
+	font-size:11px;
+	font-family:Arial,Helvetica,Arial,Verdana,Times New Roman,SunSans-Regular;
+	font-weight:normal;
+	color:#787878;
+	text-decoration:underline;
+	letter-spacing:0;
+}
+
+#CafeF_BangChungKhoanRutGon .style3
+{
+	font-size:11px;
+	font-family:Arial,Helvetica,Arial,Verdana,Times New Roman,SunSans-Regular;
+	font-weight:normal;
+	color:#787878;
+	text-decoration:none;
+	letter-spacing:0;
+	font-style:italic;
+}
+
+#CafeF_BangChungKhoanRutGon .btn a:link
+{
+	color:blue;
+	text-decoration:none;
+}
+
+#CafeF_BangChungKhoanRutGon .btn a:visited
+{
+	color:purple;
+	text-decoration:none;
+}
+
+#CafeF_BangChungKhoanRutGon .btn a:active
+{
+	color:red;
+	text-decoration:none;
+}
+
+#CafeF_BangChungKhoanRutGon .btn a:hover
+{
+	color:#000;
+	text-decoration:none;
+	position:relative;
+	top:1px;
+	left:1px;
+}
+/* ---------------------------------------------------- */
+table.CafeF_BoxChungKhoan
+{ 
+    border: solid 1px #C8D9EA; 
+}
+table.CafeF_BoxChungKhoan td,
+table.CafeF_BoxChungKhoan th
+{
+    font-size: 8pt; 
+    font-family: Arial;
+}
+table.CafeF_BoxChungKhoan th
+{
+    font-weight: normal;
+    font-size: 7pt; 
+}
+table.CafeF_BoxChungKhoan th.Actived
+{
+    background-color: #ffffff;
+    cursor: hand;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 8pt; 
+}
+table.CafeF_BoxChungKhoan th.InActived
+{
+    background-color: #C8D9EA;
+    cursor: hand;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 8pt; 
+}
+table.CafeF_BoxChungKhoan td.CafeF_BoxChungKhoan_Content th
+{
+    background-color: #e2ebf4;
+}
+table.CafeF_BoxChungKhoan td.CafeF_BoxChungKhoan_Content td
+{
+    text-align: center;
+    background-color: #e2ebf4;
+    font-size: 8pt;
+}
+table.CafeF_BoxChungKhoan td.CafeF_BoxChungKhoan_Content td.Symbol
+{
+    text-align: center;
+    background-color: #e2ebf4;
+    font-weight: bold;
+}
+table.CafeF_BoxChungKhoan td.CafeF_BoxChungKhoan_Content td.Symbol a,
+table.CafeF_BoxChungKhoan td.CafeF_BoxChungKhoan_Content td.Symbol a:link,
+table.CafeF_BoxChungKhoan td.CafeF_BoxChungKhoan_Content td.Symbol a:active,
+table.CafeF_BoxChungKhoan td.CafeF_BoxChungKhoan_Content td.Symbol a:visited
+{
+    color:#000;
+    text-decoration:none;
+    font-size: 8pt;
+}
+table.CafeF_BoxChungKhoan td.CafeF_BoxChungKhoan_Content td.Symbol a:hover
+{
+    color:#CB0003;
+    text-decoration:none;
+    font-size: 8pt;
+}
+/* ---------------------------------------- */
+div#CafeF_DSCongtyNiemyet td
+{
+    font-size: 11px;
+    font-family: Arial;
+}
+div.cf_BoxContent table.CafeF_ThiTruongNiemYet_ChuCai td
+{
+    padding-left: 2px;
+    padding-right: 2px;
+    text-align: center;
+}
+div#CafeF_DSCongtyNiemyet a.Actived,
+div#CafeF_DSCongtyNiemyet a.Actived:link,
+div#CafeF_DSCongtyNiemyet a.Actived:active,
+div#CafeF_DSCongtyNiemyet a.Actived:visited
+{
+    font-weight: bold;
+    color: #cc0000;
+    text-decoration: none;
+}
+div#CafeF_DSCongtyNiemyet a.Actived:hover
+{
+    font-weight: bold;
+    color: #cc0000;
+    text-decoration: none;
+}
+div#CafeF_DSCongtyNiemyet a.InActived,
+div#CafeF_DSCongtyNiemyet a.InActived:link,
+div#CafeF_DSCongtyNiemyet a.InActived:active,
+div#CafeF_DSCongtyNiemyet a.InActived:visited
+{
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+div#CafeF_DSCongtyNiemyet a.InActived:hover
+{
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+div.cf_BoxContent table.CafeF_ThiTruongNiemYet_ChuCai a,
+div.cf_BoxContent table.CafeF_ThiTruongNiemYet_ChuCai a:link,
+div.cf_BoxContent table.CafeF_ThiTruongNiemYet_ChuCai a:active,
+div.cf_BoxContent table.CafeF_ThiTruongNiemYet_ChuCai a:visited
+{
+    color:#000;
+    text-decoration:none;
+    font-size: 12px;
+    font-weight: bold;
+    border: solid 1px #dadada;
+    padding: 1px 3px 1px 3px;
+}
+div.cf_BoxContent table.CafeF_ThiTruongNiemYet_ChuCai a:hover
+{
+    color:#CB0003;
+    text-decoration:none;
+    font-size: 12px;
+    font-weight: bold;
+    border: solid 1px #dadada;
+    padding: 1px 3px 1px 3px;
+}
+div.cf_BoxContent td#CafeF_ThiTruongNiemYet_Content th
+{
+    font-weight: bold;
+    background-color: #efefef;
+    text-align: left;
+}
+div.cf_BoxContent td#CafeF_ThiTruongNiemYet_Content td
+{
+    background-color: #fff;
+}
+
+div.cf_BoxContent td#CafeF_ThiTruongNiemYet_Content td.Alternation
+{
+    background-color: #f3f3f3;
+    border-top: solid 1px #e9e9e9;
+    border-bottom: solid 1px #e9e9e9;
+}
+div.cf_BoxContent td#CafeF_ThiTruongNiemYet_Content a,
+div.cf_BoxContent td#CafeF_ThiTruongNiemYet_Content a:link,
+div.cf_BoxContent td#CafeF_ThiTruongNiemYet_Content a:active,
+div.cf_BoxContent td#CafeF_ThiTruongNiemYet_Content a:visited
+{
+    color:#333;
+    text-decoration:none;
+    font-size: 11px;
+}
+div.cf_BoxContent td#CafeF_ThiTruongNiemYet_Content a:hover
+{
+    color:#CB0003;
+    text-decoration:none;
+    font-size: 11px;
+}
+div.cf_BoxContent td#CafeF_ThiTruongNiemYet_Trang a,
+div.cf_BoxContent td#CafeF_ThiTruongNiemYet_Trang a:link,
+div.cf_BoxContent td#CafeF_ThiTruongNiemYet_Trang a:active,
+div.cf_BoxContent td#CafeF_ThiTruongNiemYet_Trang a:visited
+{
+    color:#000;
+    text-decoration:none;
+}
+div.cf_BoxContent td#CafeF_ThiTruongNiemYet_Trang a:hover
+{
+    color:#CB0003;
+    text-decoration:none;
+}
+/* --------------------------------------------------------- */
+#dhtmltooltip
+{
+	border: #666 2px solid;
+	padding: 5px;
+	font-size: 10pt;
+	z-index: 100;
+	-moz-opacity: 0.9;
+	opacity: 0.9;
+	filter: alpha(opacity=90);
+	left: -300px; top:0px;
+	visibility: hidden;
+	font-family: Arial;
+	position: absolute;
+	background-color: lightyellow;
+	width: 600px;
+	height:300px;
+	text-align:left;
+}
+#dhtmlpointer
+{
+	z-index: 101;
+	left: -300px; top:0px;
+	visibility: hidden;
+	position: absolute;
+}
+/* ----------------------------------------------- */
+/*Box */
+/* common paddings top-bottom */
+.cf_Pad5TB9LR{padding:7px 9px;}
+/* enhanced box styles
+ ============================================================================================== */
+/* white corner box */
+.cf_WCBox .cf_BoxHeader
+{height:4px;overflow:hidden;background:#fff url(http://cafef.channelvn.net/Images/Box_Tin_Doanh_Nghiep/corner_dg_TR.gif) 100% 0 no-repeat;}
+.cf_WCBox .cf_BoxHeader div
+{width:4px;height:4px;overflow:hidden;background:#fff url(http://cafef.channelvn.net/Images/Box_Tin_Doanh_Nghiep/corner_dg_TL.gif) 0 0 no-repeat ;float:left}
+.cf_WCBox .cf_BoxContent
+{background:#fff;}
+.cf_WCBox .cf_BoxFooter
+{height:4px;overflow:hidden;background:#fff url(http://cafef.channelvn.net/Images/Box_Tin_Doanh_Nghiep/corner_dg_BR.gif) 100% 0 no-repeat;}
+.cf_WCBox .cf_BoxFooter div
+{height:4px;width:4px;overflow:hidden;background:#fff url(http://cafef.channelvn.net/Images/Box_Tin_Doanh_Nghiep/corner_dg_BL.gif) 0 0 no-repeat;float:left}
+
+/* wire box */
+.cf_WireBox .cf_BoxContent
+{background:#fff;border-left:1px solid #dfdfdf;border-right:1px solid #dfdfdf;}
+.cf_WireBox .cf_BoxHeader
+{height:4px;overflow:hidden;background:url(http://cafef.channelvn.net/Images/Box_Tin_Doanh_Nghiep/corner_wire_TR_bg.gif) 100% 0 repeat-x;}
+.cf_WireBox .cf_BoxHeader div
+{height:4px;width:4px;background:#fff url(http://cafef.channelvn.net/Images/Box_Tin_Doanh_Nghiep/corner_wire_TL.gif) 0 0 no-repeat;float:left}
+.cf_WireBox .cf_BoxFooter
+{height:4px;overflow:hidden;background:url(http://cafef.channelvn.net/Images/Box_Tin_Doanh_Nghiep/corner_wire_BR._bg.gif) 100% 0 no-repeat;}
+.cf_WireBox .cf_BoxFooter div
+{height:4px;width:4px;background:#fff url(http://cafef.channelvn.net/Images/Box_Tin_Doanh_Nghiep/corner_wire_BL.gif) 0 0 no-repeat;float:left}
+
+.cf_MBTop
+{border-bottom:1px solid #dfdfdf; padding:0px; margin:0px; position:relative;}
+.cf_MB .cf_MB88x31
+{position:absolute;top:1px;right:5px;}
+/* ----------------------------------------- */
+table.CafeF_TopCompany
+{
+    border: 1px solid #BDCEE8;
+    font-size: 12px;
+    width: 100%;
+    background-color: #fff;
+    font-family: Arial;
+}
+table.CafeF_TopCompany th
+{
+    font-weight: bold;
+    text-align: center;
+    background-color: #DBE5F1;
+}
+table.CafeF_TopCompany td.Actived
+{
+    background-image: url(http://solieu.cafef.channelvn.net/www/cafef/images/top5_bg_vi.gif);
+    background-repeat: repeat-x;
+    height: 26px;
+    font-size: 13px;
+    border-bottom: solid 1px #fff;
+    text-align: center;
+    cursor: hand;
+    cursor: pointer;
+}
+table.CafeF_TopCompany td.InActived
+{
+    background-image: url(http://solieu.cafef.channelvn.net/www/cafef/images/top5_bg.gif);
+    background-repeat: repeat-x;
+    height: 26px;
+    font-size: 13px;
+    border-bottom: solid 1px #BDCEE8;
+    text-align: center;
+    cursor: hand;
+    cursor: pointer;
+}
+table.CafeF_TopCompany td.Actived a,
+table.CafeF_TopCompany td.Actived a:link,
+table.CafeF_TopCompany td.Actived a:active,
+table.CafeF_TopCompany td.Actived a:visited
+{
+    color:#004488;
+    text-decoration:none;
+    font-weight: bold;
+}
+table.CafeF_TopCompany a,
+table.CafeF_TopCompany a:link,
+table.CafeF_TopCompany a:active,
+table.CafeF_TopCompany a:visited
+{
+    color:#000;
+    text-decoration:none;
+    font-weight: bold;
+}
+table.CafeF_TopCompany a:hover
+{
+    color:#CB0003;
+    text-decoration:none;
+    font-weight: bold;
+}
+table.CafeF_TopCompany .Note
+{
+    color:#919191;
+    font-size:11px;
+    font-style:italic;
+    padding: 5px;
+}

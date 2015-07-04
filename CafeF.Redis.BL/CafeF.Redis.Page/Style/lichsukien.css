@@ -1,0 +1,21 @@
+﻿div.SuKienTrongThang table th {
+border-color:#CDCDCD ;
+border-style:solid solid solid none;
+border-width:1px 1px 1px medium;
+}
+div.SuKienTrongThang div.top{background-color:#ccc;background-image:url(http://cafef3.vcmedia.vn/images/sukientrongthang_04.gif); background-repeat: repeat-x}
+div.SuKienTrongThang div.top_inner{background-image:url(http://cafef3.vcmedia.vn/images/sukientrongthang_03.gif);background-position:left top;background-repeat:no-repeat; text-align: right;}
+div.SuKienTrongThang div.title{font-size: 13px; color: #cc0000; font-weight: bold; text-align: left; padding: 2px 0px 3px 5px; background-color: #eeeeee;}
+div.SuKienTrongThang div.border{font-family:Arial;border-left:solid #cdcdcd 1px;border-right:solid #cdcdcd 1px;}
+div.SuKienTrongThang div.bottom{overflow:hidden;background-image:url(http://cafef3.vcmedia.vn/images/sukientrongthang_13.gif);}
+div.SuKienTrongThang div.bottomleft{overflow:hidden;float:left;}
+div.SuKienTrongThang div.bottomright{overflow:hidden;float:right;}
+div.SuKienTrongThang table{font-family:Arial;font-size:12px;border:none;width:100%;}
+/*div.SuKienTrongThang table th{color:#004276;border-top:solid #cdcdcd 1px;border-bottom:solid #cdcdcd 1px;border-right:solid #cdcdcd 1px;border-left:none;white-space:nowrap;}*/
+div.SuKienTrongThang table th.leftcell{border-left:solid #cdcdcd 1px;}
+div.SuKienTrongThang table td{ border-bottom: none; border-top:none; border-right: solid #cdcdcd 1px; border-left:solid #cdcdcd 1px; }
+div.SuKienTrongThang table td.normal {color:#333;border-right:solid #cdcdcd 1px;border-bottom:solid #cdcdcd 1px;border-left:none; padding: 7px 9px;}
+div.SuKienTrongThang table td.leftcell{border-left:solid #cdcdcd 1px;text-align:center;}
+div.SuKienTrongThang table tr.Alt{background-color:#f3f3f3;}
+div.SuKienTrongThang table tr td table {border: none; width: auto;}
+div.SuKienTrongThang table td a, div.SuKienTrongThang table td a:link, div.SuKienTrongThang table td a:visited, div.SuKienTrongThang table td a:active, div.SuKienTrongThang table td a:hover { font-weight: normal; }

@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A87E0E6F-8DD7-4F3C-94F9-6788FA72226B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CafeF.Redis.BO</RootNamespace>
+    <AssemblyName>CafeF.Redis.BO</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CafefShareMemory, Version=1.0.3019.29089, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Cafef_BO, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Cafef_DAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Channelvn.Cached, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Channelvn.Enyim.Caching, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Channelvn.MemcachedProviders, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Connection, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Json, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="KenhF.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="MemcachedProviders, Version=1.2.3102.35179, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ApplicationBlocks.Data, Version=2.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Portal\Cafef_BO\bin\Debug\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VCCorp.FinanceChannel.CoreUpd, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BondHelper.cs" />
+    <Compile Include="CacheUtils.cs" />
+    <Compile Include="CafefCommonHelper.cs" />
+    <Compile Include="CompanyHelper_Update.cs" />
+    <Compile Include="Const.cs" />
+    <Compile Include="ConstCachePortfolio.cs" />
+    <Compile Include="KenhFHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MarketInfo.cs" />
+    <Compile Include="NewsHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NewsHelper_NoCached.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NewsHepler_Update.cs" />
+    <Compile Include="NewsTitleHotHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StorageUtils.cs" />
+    <Compile Include="TextUtil.cs" />
+    <Compile Include="UnicodeUtility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dll\BaseDAL.dll" />
+    <Content Include="dll\CafeF.Redis.BO.dll" />
+    <Content Include="dll\CafefShareMemory.dll" />
+    <Content Include="dll\Cafef_BO.dll" />
+    <Content Include="dll\Cafef_DAL.dll" />
+    <Content Include="dll\Channelvn.Cached.dll" />
+    <Content Include="dll\Channelvn.Enyim.Caching.dll" />
+    <Content Include="dll\Channelvn.MemcachedProviders.dll" />
+    <Content Include="dll\Connection.dll" />
+    <Content Include="dll\iCore.dll" />
+    <Content Include="dll\Json.dll" />
+    <Content Include="dll\KenhF.Common.dll" />
+    <Content Include="dll\KenhF.Engine.dll" />
+    <Content Include="dll\LogCMS.DAL.dll" />
+    <Content Include="dll\MemcachedProviders.dll" />
+    <Content Include="dll\Microsoft.ApplicationBlocks.Data.dll" />
+    <Content Include="dll\Portal.Core.DAL.dll" />
+    <Content Include="dll\VCCorp.FinanceChannel.CoreUpd.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

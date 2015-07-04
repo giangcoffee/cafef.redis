@@ -1,0 +1,1416 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5487AEAC-A312-408F-830A-E1F411E81557}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CafeF.Redis.Page</RootNamespace>
+    <AssemblyName>CafeF.Redis.Page</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BaseDAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="BCTCFull, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="CafeF, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\CafeF.dll</HintPath>
+    </Reference>
+    <Reference Include="CafeF.BO, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\CafeF.BO.dll</HintPath>
+    </Reference>
+    <Reference Include="CafeF.Chart, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\CafeF.Chart.dll</HintPath>
+    </Reference>
+    <Reference Include="Cafef.Chart.DataAccess, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\Cafef.Chart.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="CafeF.DAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\CafeF.DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="CafeF.ScreenerBusinessLogic, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="CafeF.ScreenerDatabase, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="CafeF.StockScreener, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="CafeF.ThongKe, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Cafef_BO, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Cafef_DAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Channelvn.Enyim.Caching, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\MT255\Desktop\scripts\Channelvn.Enyim.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="Channelvn.MemcachedProviders, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\MT255\Desktop\scripts\Channelvn.MemcachedProviders.dll</HintPath>
+    </Reference>
+    <Reference Include="Connection, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Enyim.Caching, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\MT255\Desktop\scripts\Enyim.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="KenhF.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="KenhF.Engine, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\MT255\Desktop\scripts\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MbCompression, Version=1.0.1.5, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\MT255\Desktop\scripts\MbCompression.dll</HintPath>
+    </Reference>
+    <Reference Include="MemcachedProviders, Version=1.2.3102.35179, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\MT255\Desktop\scripts\MemcachedProviders.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Interfaces, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\ServiceStack.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.aspx" />
+    <Content Include="UserControl\StockView\AnalyseReports.ascx" />
+    <Content Include="UserControl\StockView\BusinessPlan.ascx" />
+    <Content Include="UserControl\StockView\CompanyInfo.ascx" />
+    <Content Include="UserControl\StockView\SymbolNews.ascx" />
+    <Content Include="UserControl\StockView\TradeHistory.ascx" />
+    <Content Include="UserControl\StockView\TradeInfo.ascx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ajax\CongTy\BanLanhDao.aspx.cs">
+      <DependentUpon>BanLanhDao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ajax\CongTy\BanLanhDao.aspx.designer.cs">
+      <DependentUpon>BanLanhDao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ajax\CongTy\BaoCaoTaiChinh.aspx.cs">
+      <DependentUpon>BaoCaoTaiChinh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ajax\CongTy\BaoCaoTaiChinh.aspx.designer.cs">
+      <DependentUpon>BaoCaoTaiChinh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ajax\CongTy\CongTyCon.aspx.cs">
+      <DependentUpon>CongTyCon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ajax\CongTy\CongTyCon.aspx.designer.cs">
+      <DependentUpon>CongTyCon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ajax\CongTy\ThongTinChung.aspx.cs">
+      <DependentUpon>ThongTinChung.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ajax\CongTy\ThongTinChung.aspx.designer.cs">
+      <DependentUpon>ThongTinChung.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ajax\CungNganh\GenPagingSamePE.aspx.cs">
+      <DependentUpon>GenPagingSamePE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ajax\CungNganh\GenPagingSamePE.aspx.designer.cs">
+      <DependentUpon>GenPagingSamePE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ajax\CungNganh\SameCategory.aspx.cs">
+      <DependentUpon>SameCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ajax\CungNganh\SameCategory.aspx.designer.cs">
+      <DependentUpon>SameCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ajax\CungNganh\SameEPS.aspx.cs">
+      <DependentUpon>SameEPS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ajax\CungNganh\SameEPS.aspx.designer.cs">
+      <DependentUpon>SameEPS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ajax\CungNganh\SamePE.aspx.cs">
+      <DependentUpon>SamePE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ajax\CungNganh\SamePE.aspx.designer.cs">
+      <DependentUpon>SamePE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ajax\Events_RelatedNews_New.aspx.cs">
+      <DependentUpon>Events_RelatedNews_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ajax\Events_RelatedNews_New.aspx.designer.cs">
+      <DependentUpon>Events_RelatedNews_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ajax\getchart.aspx.cs">
+      <DependentUpon>getchart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ajax\getchart.aspx.designer.cs">
+      <DependentUpon>getchart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ajax\GetTotalPage.aspx.cs">
+      <DependentUpon>GetTotalPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ajax\GetTotalPage.aspx.designer.cs">
+      <DependentUpon>GetTotalPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ajax\HomepageBox.aspx.cs">
+      <DependentUpon>HomepageBox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ajax\HomepageBox.aspx.designer.cs">
+      <DependentUpon>HomepageBox.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ajax\HoSoCongTy.aspx.cs">
+      <DependentUpon>HoSoCongTy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ajax\HoSoCongTy.aspx.designer.cs">
+      <DependentUpon>HoSoCongTy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ajax\NDTNN.aspx.cs">
+      <DependentUpon>NDTNN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ajax\NDTNN.aspx.designer.cs">
+      <DependentUpon>NDTNN.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ajax\OverallHeader.aspx.cs">
+      <DependentUpon>OverallHeader.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ajax\OverallHeader.aspx.designer.cs">
+      <DependentUpon>OverallHeader.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ajax\TKDL.aspx.cs">
+      <DependentUpon>TKDL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ajax\TKDL.aspx.designer.cs">
+      <DependentUpon>TKDL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ARDownload.aspx.cs">
+      <DependentUpon>ARDownload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ARDownload.aspx.designer.cs">
+      <DependentUpon>ARDownload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCaoTaiChinh.aspx.cs">
+      <DependentUpon>BaoCaoTaiChinh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaoCaoTaiChinh.aspx.designer.cs">
+      <DependentUpon>BaoCaoTaiChinh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BondChart.aspx.cs">
+      <DependentUpon>BondChart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BondChart.aspx.designer.cs">
+      <DependentUpon>BondChart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cafef-Tools\CompanyMarketInfo.aspx.cs">
+      <DependentUpon>CompanyMarketInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cafef-Tools\CompanyMarketInfo.aspx.designer.cs">
+      <DependentUpon>CompanyMarketInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CafeFTA.aspx.cs">
+      <DependentUpon>CafeFTA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CafeFTA.aspx.designer.cs">
+      <DependentUpon>CafeFTA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ceo.aspx.cs">
+      <DependentUpon>Ceo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ceo.aspx.designer.cs">
+      <DependentUpon>Ceo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StorageImage.ashx.cs">
+      <DependentUpon>StorageImage.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="TienDoBDS.aspx.cs">
+      <DependentUpon>TienDoBDS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TienDoBDS.aspx.designer.cs">
+      <DependentUpon>TienDoBDS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DuLieuViMo.aspx.cs">
+      <DependentUpon>DuLieuViMo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DuLieuViMo.aspx.designer.cs">
+      <DependentUpon>DuLieuViMo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Help\rss.aspx.cs">
+      <DependentUpon>rss.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Help\rss.aspx.designer.cs">
+      <DependentUpon>rss.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hieubt.aspx.cs">
+      <DependentUpon>hieubt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hieubt.aspx.designer.cs">
+      <DependentUpon>hieubt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StockList.aspx.cs">
+      <DependentUpon>StockList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockList.aspx.designer.cs">
+      <DependentUpon>StockList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tooltips\Controls\CompanyInfo.ascx.cs">
+      <DependentUpon>CompanyInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tooltips\Controls\CompanyInfo.ascx.designer.cs">
+      <DependentUpon>CompanyInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Tooltips\Controls\Events.ascx.cs">
+      <DependentUpon>Events.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tooltips\Controls\Events.ascx.designer.cs">
+      <DependentUpon>Events.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Tooltips\Controls\RelatedNews.ascx.cs">
+      <DependentUpon>RelatedNews.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tooltips\Controls\RelatedNews.ascx.designer.cs">
+      <DependentUpon>RelatedNews.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Tooltips\SmallTip.aspx.cs">
+      <DependentUpon>SmallTip.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tooltips\SmallTip.aspx.designer.cs">
+      <DependentUpon>SmallTip.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tooltips\ToolTipTinDoanhNghiep.aspx.cs">
+      <DependentUpon>ToolTipTinDoanhNghiep.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tooltips\ToolTipTinDoanhNghiep.aspx.designer.cs">
+      <DependentUpon>ToolTipTinDoanhNghiep.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TraCuuLichSu2\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TraCuuLichSu2\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ultility\FilesDownLoad.aspx.cs">
+      <DependentUpon>FilesDownLoad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ultility\FilesDownLoad.aspx.designer.cs">
+      <DependentUpon>FilesDownLoad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cafef-Tools\Eps_chart\eps_chart.aspx.cs">
+      <DependentUpon>eps_chart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cafef-Tools\Eps_chart\eps_chart.aspx.designer.cs">
+      <DependentUpon>eps_chart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Compression\CompressionModule.cs" />
+    <Compile Include="Compression\CompressWebResource.cs" />
+    <Compile Include="Compression\CssHandler.ashx.cs">
+      <DependentUpon>CssHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Compression\CssHandlerOther.ashx.cs">
+      <DependentUpon>CssHandlerOther.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Compression\FooterScript.ashx.cs">
+      <DependentUpon>FooterScript.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Compression\HeaderScriptHandler.ashx.cs">
+      <DependentUpon>HeaderScriptHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Compression\ScriptHandlerOther.ashx.cs">
+      <DependentUpon>ScriptHandlerOther.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Compression\ScriptsDependency.ashx.cs">
+      <DependentUpon>ScriptsDependency.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Frame_BoxHangHoa.aspx.cs">
+      <DependentUpon>Frame_BoxHangHoa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Frame_BoxHangHoa.aspx.designer.cs">
+      <DependentUpon>Frame_BoxHangHoa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Frame_TinDoanhNghiep.aspx.cs">
+      <DependentUpon>Frame_TinDoanhNghiep.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Frame_TinDoanhNghiep.aspx.designer.cs">
+      <DependentUpon>Frame_TinDoanhNghiep.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Luong_Su_Kien.aspx.cs">
+      <DependentUpon>Luong_Su_Kien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Luong_Su_Kien.aspx.designer.cs">
+      <DependentUpon>Luong_Su_Kien.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportList.aspx.cs">
+      <DependentUpon>ReportList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportList.aspx.designer.cs">
+      <DependentUpon>ReportList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ScreenerHelper.aspx.cs">
+      <DependentUpon>ScreenerHelper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ScreenerHelper.aspx.designer.cs">
+      <DependentUpon>ScreenerHelper.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ScreenerUserGuide.aspx.cs">
+      <DependentUpon>ScreenerUserGuide.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ScreenerUserGuide.aspx.designer.cs">
+      <DependentUpon>ScreenerUserGuide.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TinDoanhNghiepChiTiet.aspx.cs">
+      <DependentUpon>TinDoanhNghiepChiTiet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TinDoanhNghiepChiTiet.aspx.designer.cs">
+      <DependentUpon>TinDoanhNghiepChiTiet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DuLieu.aspx.cs">
+      <DependentUpon>DuLieu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DuLieu.aspx.designer.cs">
+      <DependentUpon>DuLieu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Help\cafef_lienhe.aspx.cs">
+      <DependentUpon>cafef_lienhe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Help\cafef_lienhe.aspx.designer.cs">
+      <DependentUpon>cafef_lienhe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Help\hesobeta.aspx.cs">
+      <DependentUpon>hesobeta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Help\hesobeta.aspx.designer.cs">
+      <DependentUpon>hesobeta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Help\ScreenerHelper.aspx.cs">
+      <DependentUpon>ScreenerHelper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Help\ScreenerHelper.aspx.designer.cs">
+      <DependentUpon>ScreenerHelper.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KenhF.aspx.cs">
+      <DependentUpon>KenhF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KenhF.aspx.designer.cs">
+      <DependentUpon>KenhF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LichSuKien.aspx.cs">
+      <DependentUpon>LichSuKien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LichSuKien.aspx.designer.cs">
+      <DependentUpon>LichSuKien.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\SoLieu.Master.cs">
+      <DependentUpon>SoLieu.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage\SoLieu.Master.designer.cs">
+      <DependentUpon>SoLieu.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Old_App_Code\ConvertUtility.cs" />
+    <Compile Include="Default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\StockMain.Master.cs">
+      <DependentUpon>StockMain.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage\StockMain.Master.designer.cs">
+      <DependentUpon>StockMain.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Old_App_Code\CutePager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Screener.aspx.cs">
+      <DependentUpon>Screener.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Screener.aspx.designer.cs">
+      <DependentUpon>Screener.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TinDoanhNghiep.aspx.cs">
+      <DependentUpon>TinDoanhNghiep.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TinDoanhNghiep.aspx.designer.cs">
+      <DependentUpon>TinDoanhNghiep.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TraCuuLichSu2\GiaoDichNuocNgoai.ascx.cs">
+      <DependentUpon>GiaoDichNuocNgoai.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TraCuuLichSu2\GiaoDichNuocNgoai.ascx.designer.cs">
+      <DependentUpon>GiaoDichNuocNgoai.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TraCuuLichSu2\LichSuGia.ascx.cs">
+      <DependentUpon>LichSuGia.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TraCuuLichSu2\LichSuGia.ascx.designer.cs">
+      <DependentUpon>LichSuGia.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TraCuuLichSu2\ThongKeDatLenh.ascx.cs">
+      <DependentUpon>ThongKeDatLenh.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TraCuuLichSu2\ThongKeDatLenh.ascx.designer.cs">
+      <DependentUpon>ThongKeDatLenh.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TraCuuLichSu2\TraCuu.aspx.cs">
+      <DependentUpon>TraCuu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TraCuuLichSu2\TraCuu.aspx.designer.cs">
+      <DependentUpon>TraCuu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tra_Cuu_Lich_Su_Giao_Dich.aspx.cs">
+      <DependentUpon>Tra_Cuu_Lich_Su_Giao_Dich.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tra_Cuu_Lich_Su_Giao_Dich.aspx.designer.cs">
+      <DependentUpon>Tra_Cuu_Lich_Su_Giao_Dich.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Bond\BondHomepageBox.ascx.cs">
+      <DependentUpon>BondHomepageBox.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Bond\BondHomepageBox.ascx.designer.cs">
+      <DependentUpon>BondHomepageBox.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CafefToolbar.ascx.cs">
+      <DependentUpon>CafefToolbar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CafefToolbar.ascx.designer.cs">
+      <DependentUpon>CafefToolbar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Ceo\CeoAchievement.ascx.cs">
+      <DependentUpon>CeoAchievement.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Ceo\CeoAchievement.ascx.designer.cs">
+      <DependentUpon>CeoAchievement.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Ceo\CeoAsset.ascx.cs">
+      <DependentUpon>CeoAsset.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Ceo\CeoAsset.ascx.designer.cs">
+      <DependentUpon>CeoAsset.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Ceo\CeoIn.ascx.cs">
+      <DependentUpon>CeoIn.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Ceo\CeoIn.ascx.designer.cs">
+      <DependentUpon>CeoIn.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Ceo\CeoNews.ascx.cs">
+      <DependentUpon>CeoNews.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Ceo\CeoNews.ascx.designer.cs">
+      <DependentUpon>CeoNews.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Ceo\CeoNote.ascx.cs">
+      <DependentUpon>CeoNote.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Ceo\CeoNote.ascx.designer.cs">
+      <DependentUpon>CeoNote.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Ceo\CeoPosition.ascx.cs">
+      <DependentUpon>CeoPosition.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Ceo\CeoPosition.ascx.designer.cs">
+      <DependentUpon>CeoPosition.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Ceo\CeoProcess.ascx.cs">
+      <DependentUpon>CeoProcess.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Ceo\CeoProcess.ascx.designer.cs">
+      <DependentUpon>CeoProcess.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Ceo\CeoProfile.ascx.cs">
+      <DependentUpon>CeoProfile.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Ceo\CeoProfile.ascx.designer.cs">
+      <DependentUpon>CeoProfile.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Ceo\CeoRelation.ascx.cs">
+      <DependentUpon>CeoRelation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Ceo\CeoRelation.ascx.designer.cs">
+      <DependentUpon>CeoRelation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Ceo\CeoSchool.ascx.cs">
+      <DependentUpon>CeoSchool.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Ceo\CeoSchool.ascx.designer.cs">
+      <DependentUpon>CeoSchool.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\DatePicker\DatePicker.ascx.cs">
+      <DependentUpon>DatePicker.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\DatePicker\DatePicker.ascx.designer.cs">
+      <DependentUpon>DatePicker.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\DuLieuViMo\BCNSNN.ascx.cs">
+      <DependentUpon>BCNSNN.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\DuLieuViMo\BCNSNN.ascx.designer.cs">
+      <DependentUpon>BCNSNN.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\DuLieuViMo\CPIAfterChart.ascx.cs">
+      <DependentUpon>CPIAfterChart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\DuLieuViMo\CPIAfterChart.ascx.designer.cs">
+      <DependentUpon>CPIAfterChart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\DuLieuViMo\CPIBeforeChart.ascx.cs">
+      <DependentUpon>CPIBeforeChart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\DuLieuViMo\CPIBeforeChart.ascx.designer.cs">
+      <DependentUpon>CPIBeforeChart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\DuLieuViMo\DTTNSNNChart.ascx.cs">
+      <DependentUpon>DTTNSNNChart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\DuLieuViMo\DTTNSNNChart.ascx.designer.cs">
+      <DependentUpon>DTTNSNNChart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\DuLieuViMo\FDIChart.ascx.cs">
+      <DependentUpon>FDIChart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\DuLieuViMo\FDIChart.ascx.designer.cs">
+      <DependentUpon>FDIChart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\DuLieuViMo\GDPChart.ascx.cs">
+      <DependentUpon>GDPChart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\DuLieuViMo\GDPChart.ascx.designer.cs">
+      <DependentUpon>GDPChart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\DuLieuViMo\Popup.aspx.cs">
+      <DependentUpon>Popup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\DuLieuViMo\Popup.aspx.designer.cs">
+      <DependentUpon>Popup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\DuLieuViMo\SLCNChart.ascx.cs">
+      <DependentUpon>SLCNChart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\DuLieuViMo\SLCNChart.ascx.designer.cs">
+      <DependentUpon>SLCNChart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\DuLieuViMo\TMBLChart.ascx.cs">
+      <DependentUpon>TMBLChart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\DuLieuViMo\TMBLChart.ascx.designer.cs">
+      <DependentUpon>TMBLChart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\DuLieuViMo\XNKChart.ascx.cs">
+      <DependentUpon>XNKChart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\DuLieuViMo\XNKChart.ascx.designer.cs">
+      <DependentUpon>XNKChart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Footer\ucPartner.ascx.cs">
+      <DependentUpon>ucPartner.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Footer\ucPartner.ascx.designer.cs">
+      <DependentUpon>ucPartner.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Header\HeaderDiv.ascx.cs">
+      <DependentUpon>HeaderDiv.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Header\HeaderDiv.ascx.designer.cs">
+      <DependentUpon>HeaderDiv.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Header\ucChart.ascx.cs">
+      <DependentUpon>ucChart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Header\ucChart.ascx.designer.cs">
+      <DependentUpon>ucChart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Header\ucHeaderIndex.ascx.cs">
+      <DependentUpon>ucHeaderIndex.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Header\ucHeaderIndex.ascx.designer.cs">
+      <DependentUpon>ucHeaderIndex.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Homepage\ucBoxHangHoa.ascx.cs">
+      <DependentUpon>ucBoxHangHoa.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Homepage\ucBoxHangHoa.ascx.designer.cs">
+      <DependentUpon>ucBoxHangHoa.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Homepage\ucBoxTinDoanhNghiep.ascx.cs">
+      <DependentUpon>ucBoxTinDoanhNghiep.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Homepage\ucBoxTinDoanhNghiep.ascx.designer.cs">
+      <DependentUpon>ucBoxTinDoanhNghiep.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\KhopLenh\test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\KhopLenh\test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\LichSuKien\ChiTietTin.ascx.cs">
+      <DependentUpon>ChiTietTin.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\LichSuKien\ChiTietTin.ascx.designer.cs">
+      <DependentUpon>ChiTietTin.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\LichSuKien\LatestEvents.ascx.cs">
+      <DependentUpon>LatestEvents.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\LichSuKien\LatestEvents.ascx.designer.cs">
+      <DependentUpon>LatestEvents.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\LichSuKien\LichSuKien_TomTat.ascx.cs">
+      <DependentUpon>LichSuKien_TomTat.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\LichSuKien\LichSuKien_TomTat.ascx.designer.cs">
+      <DependentUpon>LichSuKien_TomTat.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\LichSuKien\LichSuKien_TomTat_v2.ascx.cs">
+      <DependentUpon>LichSuKien_TomTat_v2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\LichSuKien\LichSuKien_TomTat_v2.ascx.designer.cs">
+      <DependentUpon>LichSuKien_TomTat_v2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\LichSuKien\Lich_su_kien.ascx.cs">
+      <DependentUpon>Lich_su_kien.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\LichSuKien\Lich_su_kien.ascx.designer.cs">
+      <DependentUpon>Lich_su_kien.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\LichSuKien\Lich_su_kien_v2.ascx.cs">
+      <DependentUpon>Lich_su_kien_v2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\LichSuKien\Lich_su_kien_v2.ascx.designer.cs">
+      <DependentUpon>Lich_su_kien_v2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\LichSuKien\NewsContent.ascx.cs">
+      <DependentUpon>NewsContent.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\LichSuKien\NewsContent.ascx.designer.cs">
+      <DependentUpon>NewsContent.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\LichSuKien\OtherCrawlerNews.ascx.cs">
+      <DependentUpon>OtherCrawlerNews.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\LichSuKien\OtherCrawlerNews.ascx.designer.cs">
+      <DependentUpon>OtherCrawlerNews.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\LichSu\CoPhieuQuy.ascx.cs">
+      <DependentUpon>CoPhieuQuy.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\LichSu\CoPhieuQuy.ascx.designer.cs">
+      <DependentUpon>CoPhieuQuy.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\LichSu\CungCau.ascx.cs">
+      <DependentUpon>CungCau.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\LichSu\CungCau.ascx.designer.cs">
+      <DependentUpon>CungCau.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\LichSu\GiaoDichNoiBo.ascx.cs">
+      <DependentUpon>GiaoDichNoiBo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\LichSu\GiaoDichNoiBo.ascx.designer.cs">
+      <DependentUpon>GiaoDichNoiBo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\LichSu\GiaoDichNuocNgoai.ascx.cs">
+      <DependentUpon>GiaoDichNuocNgoai.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\LichSu\GiaoDichNuocNgoai.ascx.designer.cs">
+      <DependentUpon>GiaoDichNuocNgoai.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\LichSu\LichSuGia.ascx.cs">
+      <DependentUpon>LichSuGia.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\LichSu\LichSuGia.ascx.designer.cs">
+      <DependentUpon>LichSuGia.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\NewsTitleHot\ucNewsTitleHot.ascx.cs">
+      <DependentUpon>ucNewsTitleHot.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\NewsTitleHot\ucNewsTitleHot.ascx.designer.cs">
+      <DependentUpon>ucNewsTitleHot.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Report\AnalyseReportsInHomePage.ascx.cs">
+      <DependentUpon>AnalyseReportsInHomePage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Report\AnalyseReportsInHomePage.ascx.designer.cs">
+      <DependentUpon>AnalyseReportsInHomePage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Report\AnalyzeReportList.ascx.cs">
+      <DependentUpon>AnalyzeReportList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Report\AnalyzeReportList.ascx.designer.cs">
+      <DependentUpon>AnalyzeReportList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\StockNewsControl\StockNewsInHomePage.ascx.cs">
+      <DependentUpon>StockNewsInHomePage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\StockNewsControl\StockNewsInHomePage.ascx.designer.cs">
+      <DependentUpon>StockNewsInHomePage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\StockView\AnalyseReports.ascx.cs">
+      <DependentUpon>AnalyseReports.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\StockView\AnalyseReports.ascx.designer.cs">
+      <DependentUpon>AnalyseReports.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\StockView\BusinessPlan.ascx.cs">
+      <DependentUpon>BusinessPlan.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\StockView\BusinessPlan.ascx.designer.cs">
+      <DependentUpon>BusinessPlan.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\StockView\CompanyInfo.ascx.cs">
+      <DependentUpon>CompanyInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\StockView\CompanyInfo.ascx.designer.cs">
+      <DependentUpon>CompanyInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\StockView\FinanceStatement.ascx.cs">
+      <DependentUpon>FinanceStatement.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\StockView\FinanceStatement.ascx.designer.cs">
+      <DependentUpon>FinanceStatement.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\StockView\InSameCategory.ascx.cs">
+      <DependentUpon>InSameCategory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\StockView\InSameCategory.ascx.designer.cs">
+      <DependentUpon>InSameCategory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\StockView\SameEPS_PE.ascx.cs">
+      <DependentUpon>SameEPS_PE.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\StockView\SameEPS_PE.ascx.designer.cs">
+      <DependentUpon>SameEPS_PE.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\StockView\Search.ascx.cs">
+      <DependentUpon>Search.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\StockView\Search.ascx.designer.cs">
+      <DependentUpon>Search.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\StockView\SymbolNews.ascx.cs">
+      <DependentUpon>SymbolNews.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\StockView\SymbolNews.ascx.designer.cs">
+      <DependentUpon>SymbolNews.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\StockView\TradeHistory.ascx.cs">
+      <DependentUpon>TradeHistory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\StockView\TradeHistory.ascx.designer.cs">
+      <DependentUpon>TradeHistory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\StockView\TradeInfo.ascx.cs">
+      <DependentUpon>TradeInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\StockView\TradeInfo.ascx.designer.cs">
+      <DependentUpon>TradeInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\StockView\TradeInfoHeader.ascx.cs">
+      <DependentUpon>TradeInfoHeader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\StockView\TradeInfoHeader.ascx.designer.cs">
+      <DependentUpon>TradeInfoHeader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\StockView\ucBanLanhDao.ascx.cs">
+      <DependentUpon>ucBanLanhDao.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\StockView\ucBanLanhDao.ascx.designer.cs">
+      <DependentUpon>ucBanLanhDao.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\StockView\ucBanLanhDaoV2.ascx.cs">
+      <DependentUpon>ucBanLanhDaoV2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\StockView\ucBanLanhDaoV2.ascx.designer.cs">
+      <DependentUpon>ucBanLanhDaoV2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\StockView\ucBaoCaoTaiChinh.ascx.cs">
+      <DependentUpon>ucBaoCaoTaiChinh.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\StockView\ucBaoCaoTaiChinh.ascx.designer.cs">
+      <DependentUpon>ucBaoCaoTaiChinh.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\StockView\ucCongTyCon.ascx.cs">
+      <DependentUpon>ucCongTyCon.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\StockView\ucCongTyCon.ascx.designer.cs">
+      <DependentUpon>ucCongTyCon.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\StockView\ucThongTinChung.ascx.cs">
+      <DependentUpon>ucThongTinChung.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\StockView\ucThongTinChung.ascx.designer.cs">
+      <DependentUpon>ucThongTinChung.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\TienDoBDS\BDSDuanChitiet.ascx.cs">
+      <DependentUpon>BDSDuanChitiet.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\TienDoBDS\BDSDuanChitiet.ascx.designer.cs">
+      <DependentUpon>BDSDuanChitiet.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\TienDoBDS\BDSDuanThamgia.ascx.cs">
+      <DependentUpon>BDSDuanThamgia.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\TienDoBDS\BDSDuanThamgia.ascx.designer.cs">
+      <DependentUpon>BDSDuanThamgia.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\TienDoBDS\BDSImages.ascx.cs">
+      <DependentUpon>BDSImages.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\TienDoBDS\BDSImages.ascx.designer.cs">
+      <DependentUpon>BDSImages.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CafeF.BCTC.DA\CafeF.BCTC.DA.csproj">
+      <Project>{8B758CE0-095A-448E-8ED7-4176C79A9618}</Project>
+      <Name>CafeF.BCTC.DA</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CafeF.DLVM.DA\CafeF.DLVM.DA.csproj">
+      <Project>{AED23625-675C-461F-ADA8-7F01FC79FFC4}</Project>
+      <Name>CafeF.DLVM.DA</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CafeF.Redis.BL\CafeF.Redis.BL.csproj">
+      <Project>{419750C2-E875-470E-977B-2F60796F1168}</Project>
+      <Name>CafeF.Redis.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CafeF.Redis.BO\CafeF.Redis.BO.csproj">
+      <Project>{A87E0E6F-8DD7-4F3C-94F9-6788FA72226B}</Project>
+      <Name>CafeF.Redis.BO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CafeF.Redis.Data\CafeF.Redis.Data.csproj">
+      <Project>{66B2DCFC-B222-4F36-BCDC-BCB602EE2312}</Project>
+      <Name>CafeF.Redis.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CafeF.Redis.Entity\CafeF.Redis.Entity\CafeF.Redis.Entity.csproj">
+      <Project>{4D654B7F-EDE2-4B89-BA42-6BDAE2D15796}</Project>
+      <Name>CafeF.Redis.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CafeF.TA\CafeF.TA.csproj">
+      <Project>{09DB430F-8864-4472-9650-392F4C8B1FB0}</Project>
+      <Name>CafeF.TA</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ServiceStack.Redis\ServiceStack.Redis.csproj">
+      <Project>{AF99F19B-4C04-4F58-81EF-B092F1FCC540}</Project>
+      <Name>ServiceStack.Redis</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ajax\CongTy\BanLanhDao.aspx" />
+    <Content Include="Ajax\CongTy\BaoCaoTaiChinh.aspx" />
+    <Content Include="Ajax\CongTy\CongTyCon.aspx" />
+    <Content Include="Ajax\CongTy\ThongTinChung.aspx" />
+    <Content Include="Ajax\Events_RelatedNews_New.aspx" />
+    <Content Include="Ajax\GetTotalPage.aspx" />
+    <Content Include="Ajax\NDTNN.aspx" />
+    <Content Include="Ajax\TKDL.aspx" />
+    <Content Include="demo\1.jpg" />
+    <Content Include="demo\10.jpg" />
+    <Content Include="demo\11.jpg" />
+    <Content Include="demo\12.jpg" />
+    <Content Include="demo\13.jpg" />
+    <Content Include="demo\14.jpg" />
+    <Content Include="demo\15.jpg" />
+    <Content Include="demo\16.jpg" />
+    <Content Include="demo\17.jpg" />
+    <Content Include="demo\18.jpg" />
+    <Content Include="demo\19.jpg" />
+    <Content Include="demo\2.jpg" />
+    <Content Include="demo\3.jpg" />
+    <Content Include="demo\4.jpg" />
+    <Content Include="demo\5.jpg" />
+    <Content Include="demo\6.jpg" />
+    <Content Include="demo\7.jpg" />
+    <Content Include="demo\8.jpg" />
+    <Content Include="demo\9.jpg" />
+    <Content Include="demo\cafefm.jpg" />
+    <Content Include="demo\ckhoabinh.jpg" />
+    <Content Include="demo\sme.jpg" />
+    <Content Include="demo\vndirectl.jpg" />
+    <Content Include="dll\CafeF.BO.dll" />
+    <Content Include="dll\CafeF.DAL.dll" />
+    <Content Include="dll\CafeF.dll" />
+    <Content Include="dll\Channelvn.Cached.dll" />
+    <Content Include="dll\Channelvn.Enyim.Caching.dll" />
+    <Content Include="dll\Channelvn.MemcachedProviders.dll" />
+    <Content Include="dll\JsonExSerializer.dll" />
+    <Content Include="dll\MemcachedProviders.dll" />
+    <Content Include="dll\ServiceStack.Client.dll" />
+    <Content Include="dll\ServiceStack.Common.dll" />
+    <Content Include="dll\ServiceStack.Interfaces.dll" />
+    <Content Include="dll\ServiceStack.Messaging.dll" />
+    <Content Include="dll\ServiceStack.Text.dll" />
+    <Content Include="DuLieu.aspx" />
+    <Content Include="images\ads728x90.png" />
+    <Content Include="images\bg.png" />
+    <Content Include="images\categories.png" />
+    <Content Include="images\container.png" />
+    <Content Include="images\Down_h.png" />
+    <Content Include="images\loading.gif" />
+    <Content Include="images\macktheodoi.png" />
+    <Content Include="images\mainnav.png" />
+    <Content Include="images\nochange_.jpg" />
+    <Content Include="images\Nochange_h.png" />
+    <Content Include="images\pagewrap.png" />
+    <Content Include="images\spl-head.png" />
+    <Content Include="images\sprite.png" />
+    <Content Include="images\sprite_ico.png" />
+    <Content Include="MasterPage\StockMain.Master" />
+    <Content Include="scripts\cafef.v2.js" />
+    <Content Include="scripts\searchbox.js" />
+    <Content Include="Style\ie6.css" />
+    <Content Include="Style\images\bubble.png" />
+    <Content Include="Style\images\bubble_filler.png" />
+    <Content Include="Style\tooltip.css" />
+    <Content Include="Tra_Cuu_Lich_Su_Giao_Dich.aspx" />
+    <Content Include="UserControl\DatePicker\calendar.gif" />
+    <Content Include="UserControl\DatePicker\DatePicker.ascx" />
+    <Content Include="UserControl\DatePicker\datepicker.css" />
+    <Content Include="UserControl\DatePicker\datepicker.js" />
+    <Content Include="UserControl\Footer\ucFooter.ascx" />
+    <Content Include="UserControl\Header\HeaderDiv.ascx" />
+    <Content Include="UserControl\Header\ucHeader.ascx" />
+    <Content Include="UserControl\Header\ucMenu.ascx" />
+    <Content Include="UserControl\LichSu\LichSuGia.ascx" />
+    <Content Include="UserControl\StockView\FinanceStatement.ascx" />
+    <Content Include="UserControl\StockView\InSameCategory.ascx" />
+    <Content Include="UserControl\StockView\SameEPS_PE.ascx" />
+    <Content Include="UserControl\StockView\Search.ascx" />
+    <Content Include="UserControl\StockView\TradeInfoHeader.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ajax\CungNganh\GenPagingSamePE.aspx" />
+    <Content Include="Ajax\CungNganh\SameCategory.aspx" />
+    <Content Include="Ajax\CungNganh\SameEPS.aspx" />
+    <Content Include="Ajax\CungNganh\SamePE.aspx" />
+    <Content Include="Ajax\getchart.aspx" />
+    <Content Include="Ajax\HomepageBox.aspx" />
+    <Content Include="Ajax\HoSoCongTy.aspx" />
+    <Content Include="Ajax\OverallHeader.aspx" />
+    <Content Include="Ajax\tinmoi.aspx" />
+    <Content Include="ARDownload.aspx" />
+    <Content Include="BaoCaoTaiChinh.aspx" />
+    <Content Include="BCTCFull\BCTCFull.aspx" />
+    <Content Include="BondChart.aspx" />
+    <Content Include="Cafef-Tools\CompanyMarketInfo.aspx" />
+    <Content Include="CafeFTA.aspx" />
+    <Content Include="Ceo.aspx" />
+    <Content Include="ChartIndex\Chart.aspx" />
+    <Content Include="CheckResponeTime.aspx" />
+    <Content Include="Style\ceo.css" />
+    <Content Include="Style\dulieu.css" />
+    <Content Include="TienDoBDS.aspx" />
+    <Content Include="dll\BaseDAL.dll" />
+    <Content Include="dll\BCTCFull.dll" />
+    <Content Include="dll\Cafef_BO.dll" />
+    <Content Include="dll\Cafef_DAL.dll" />
+    <Content Include="dll\Connection.dll" />
+    <Content Include="DuLieuViMo.aspx" />
+    <Content Include="Help\calcRate.html" />
+    <Content Include="Help\rss.aspx" />
+    <Content Include="hieubt.aspx" />
+    <Content Include="robots.txt" />
+    <Content Include="scripts\cafef.header.cometd.solieu.js" />
+    <Content Include="scripts\cometd\AckExtension.js" />
+    <Content Include="scripts\cometd\cometd.js" />
+    <Content Include="scripts\cometd\jquery.cometd-reload.js" />
+    <Content Include="scripts\cometd\jquery.cometd.js" />
+    <Content Include="scripts\cometd\jquery.cookie.js" />
+    <Content Include="scripts\cometd\jquery.json-2.2.js" />
+    <Content Include="scripts\cometd\ReloadExtension.js" />
+    <Content Include="scripts\inlinestockpage.js" />
+    <Content Include="scripts\laixuatnganhang.js" />
+    <Content Include="Sitemap.xml" />
+    <Content Include="StockList.aspx" />
+    <Content Include="styles\iepngfix.htc" />
+    <Content Include="Style\lichsukien.css" />
+    <Content Include="Style\style.css" />
+    <Content Include="Tooltips\Controls\CompanyInfo.ascx" />
+    <Content Include="Tooltips\Controls\Events.ascx" />
+    <Content Include="Tooltips\Controls\RelatedNews.ascx" />
+    <Content Include="Tooltips\SmallTip.aspx" />
+    <Content Include="Tooltips\ToolTipTinDoanhNghiep.aspx" />
+    <Content Include="TraCuuLichSu2\Default.aspx" />
+    <Content Include="Ultility\FilesDownLoad.aspx" />
+    <Content Include="Cafef-Tools\Eps_chart\blank.htm" />
+    <Content Include="Cafef-Tools\Eps_chart\eps_chart.aspx" />
+    <Content Include="Cafef-Tools\Eps_chart\TechnicalChart.swf" />
+    <Content Include="CafeF.ThongKe\CacheThongKe.aspx" />
+    <Content Include="CafeF.ThongKe\ThongKe.aspx" />
+    <Content Include="CafeF.ThongKe\ThongKeAjax.aspx" />
+    <Content Include="CafeF.ThongKe\ucPadding.ascx" />
+    <Content Include="CafeF.ThongKe\ucThongKe.ascx" />
+    <Content Include="CafeF.ThongKe\ucThongKeAjax.ascx" />
+    <Content Include="CafeF.ThongKe\ucThongKePadding.ascx" />
+    <Content Include="Chart.aspx" />
+    <Content Include="Chart2.aspx" />
+    <Content Include="Config\RewriteRules.config" />
+    <Content Include="Compression\CssHandler.ashx" />
+    <Content Include="Compression\CssHandlerOther.ashx" />
+    <Content Include="Compression\FooterScript.ashx" />
+    <Content Include="Compression\HeaderScriptHandler.ashx" />
+    <Content Include="Compression\ScriptHandlerOther.ashx" />
+    <Content Include="Compression\ScriptsDependency.ashx" />
+    <None Include="demo\notes\1.jpg.mno" />
+    <None Include="demo\notes\10.jpg.mno" />
+    <None Include="demo\notes\11.jpg.mno" />
+    <None Include="demo\notes\12.jpg.mno" />
+    <None Include="demo\notes\13.jpg.mno" />
+    <None Include="demo\notes\14.jpg.mno" />
+    <None Include="demo\notes\15.jpg.mno" />
+    <None Include="demo\notes\16.jpg.mno" />
+    <None Include="demo\notes\17.jpg.mno" />
+    <None Include="demo\notes\18.jpg.mno" />
+    <None Include="demo\notes\19.jpg.mno" />
+    <None Include="demo\notes\2.jpg.mno" />
+    <None Include="demo\notes\3.jpg.mno" />
+    <None Include="demo\notes\4.jpg.mno" />
+    <None Include="demo\notes\5.jpg.mno" />
+    <None Include="demo\notes\6.jpg.mno" />
+    <None Include="demo\notes\7.jpg.mno" />
+    <None Include="demo\notes\8.jpg.mno" />
+    <None Include="demo\notes\9.jpg.mno" />
+    <None Include="demo\notes\cafefm.jpg.mno" />
+    <None Include="Help\Help_EPS.doc" />
+    <None Include="images\_notes\ads728x90.png.mno" />
+    <None Include="images\_notes\bg.png.mno" />
+    <None Include="images\_notes\categories.png.mno" />
+    <None Include="images\_notes\container.png.mno" />
+    <None Include="images\_notes\macktheodoi.png.mno" />
+    <None Include="images\_notes\mainnav.png.mno" />
+    <None Include="images\_notes\pagewrap.png.mno" />
+    <None Include="images\_notes\spl-head.png.mno" />
+    <None Include="images\_notes\sprite.png.mno" />
+    <None Include="images\_notes\sprite_ico.png.mno" />
+    <Content Include="StorageImage.ashx" />
+    <Content Include="scripts\cometd.framework.js" />
+    <Content Include="dll\CafeF.ThongKe.dll" />
+    <Content Include="Frame_BoxHangHoa.aspx" />
+    <Content Include="Frame_TinDoanhNghiep.aspx" />
+    <Content Include="images\images\conner_bottom_left.gif" />
+    <Content Include="images\images\conner_bottom_right.gif" />
+    <Content Include="images\images\conner_top_left.gif" />
+    <Content Include="images\images\conner_top_right.gif" />
+    <Content Include="images\images\Home_r35_c23.jpg" />
+    <Content Include="images\images\muiten1.gif" />
+    <Content Include="images\images\timkiem.gif" />
+    <Content Include="Luong_Su_Kien.aspx" />
+    <Content Include="ReportList.aspx" />
+    <Content Include="ScreenerHelper.aspx" />
+    <Content Include="ScreenerUserGuide.aspx" />
+    <Content Include="scripts\DANH_SACH_CONG_TY_NIEM_YET.js" />
+    <Content Include="scripts\TOP_10_CONG_TY.js" />
+    <Content Include="scripts\TOP_10_CO_PHIEU.js" />
+    <Content Include="Style\help.css" />
+    <Content Include="TinDoanhNghiepChiTiet.aspx" />
+    <Content Include="dll\Cafef.Chart.DataAccess.dll" />
+    <Content Include="dll\CafeF.Chart.dll" />
+    <Content Include="dll\CafeF.ScreenerBusinessLogic.dll" />
+    <Content Include="dll\CafeF.ScreenerDatabase.dll" />
+    <Content Include="dll\CafeF.StockScreener.dll" />
+    <Content Include="dll\Enyim.Caching.dll" />
+    <Content Include="dll\KenhF.Common.dll" />
+    <Content Include="dll\KenhF.Engine.dll" />
+    <Content Include="dll\log4net.dll" />
+    <Content Include="dll\MbCompression.dll" />
+    <Content Include="Help\cafef-huongdan.htm" />
+    <Content Include="Help\cafef-mobile.htm" />
+    <Content Include="Help\cafef_lienhe.aspx" />
+    <Content Include="Help\hesobeta.aspx" />
+    <Content Include="Help\ScreenerHelper.aspx" />
+    <Content Include="images\banlanhdao_sohuu_sel.gif" />
+    <Content Include="images\banlanhdao_sohuu_unsel.gif" />
+    <Content Include="images\LSG\down_.gif" />
+    <Content Include="images\LSG\nochange_.jpg" />
+    <Content Include="images\LSG\up_.gif" />
+    <Content Include="images\StockImages\img_dowon.gif" />
+    <Content Include="images\StockImages\img_up.gif" />
+    <Content Include="KenhF.aspx" />
+    <Content Include="LichSuKien.aspx" />
+    <Content Include="MasterPage\SoLieu.Master" />
+    <Content Include="Screener.aspx" />
+    <Content Include="scripts\footer.js" />
+    <Content Include="scripts\header.js" />
+    <Content Include="scripts\HeaderScript.js" />
+    <Content Include="scripts\InlineJSStock.CompanyInfo.js" />
+    <Content Include="scripts\InlineJSStock.SameCategory.js" />
+    <Content Include="scripts\InlineJSStock.SameEPS.PE.js" />
+    <Content Include="scripts\InlineJSStock.TradeHistory.js" />
+    <Content Include="scripts\jquery.autocomplete2.js" />
+    <Content Include="scripts\THEO_DOI_CHUNG_KHOAN.js" />
+    <Content Include="Style\CompressedStyles.1312.css" />
+    <Content Include="Style\solieu.v2.css" />
+    <Content Include="Style\stockbar.v2.css" />
+    <Content Include="test.aspx" />
+    <Content Include="TinDoanhNghiep.aspx" />
+    <Content Include="TraCuuLichSu2\GiaoDichNuocNgoai.ascx" />
+    <Content Include="TraCuuLichSu2\Images\Giua.png" />
+    <Content Include="TraCuuLichSu2\Images\GiuaOff.png" />
+    <Content Include="TraCuuLichSu2\Images\offie6.png" />
+    <Content Include="TraCuuLichSu2\Images\onie6.png" />
+    <Content Include="TraCuuLichSu2\Images\Phai.png" />
+    <Content Include="TraCuuLichSu2\Images\PhaiOff.png" />
+    <Content Include="TraCuuLichSu2\Images\Trai.png" />
+    <Content Include="TraCuuLichSu2\Images\TraiOff.png" />
+    <Content Include="TraCuuLichSu2\LichSuGia.ascx" />
+    <Content Include="TraCuuLichSu2\ThongKeDatLenh.ascx" />
+    <Content Include="TraCuuLichSu2\TraCuu.aspx" />
+    <Content Include="UserControls\Footer\ucFooterv2.ascx" />
+    <Content Include="UserControls\Header\ucHeaderv2.ascx" />
+    <Content Include="UserControls\Header\ucMenuv2.ascx" />
+    <Content Include="UserControl\Bond\BondHomepageBox.ascx" />
+    <Content Include="UserControl\CafefToolbar.ascx" />
+    <Content Include="UserControl\Ceo\CeoAchievement.ascx" />
+    <Content Include="UserControl\Ceo\CeoAsset.ascx" />
+    <Content Include="UserControl\Ceo\CeoIn.ascx" />
+    <Content Include="UserControl\Ceo\CeoNews.ascx" />
+    <Content Include="UserControl\Ceo\CeoNote.ascx" />
+    <Content Include="UserControl\Ceo\CeoPosition.ascx" />
+    <Content Include="UserControl\Ceo\CeoProcess.ascx" />
+    <Content Include="UserControl\Ceo\CeoProfile.ascx" />
+    <Content Include="UserControl\Ceo\CeoRelation.ascx" />
+    <Content Include="UserControl\Ceo\CeoSchool.ascx" />
+    <Content Include="UserControl\DuLieuViMo\BCNSNN.ascx" />
+    <Content Include="UserControl\DuLieuViMo\CPIAfterChart.ascx" />
+    <Content Include="UserControl\DuLieuViMo\CPIBeforeChart.ascx" />
+    <Content Include="UserControl\DuLieuViMo\DTTNSNNChart.ascx" />
+    <Content Include="UserControl\DuLieuViMo\FDIChart.ascx" />
+    <Content Include="UserControl\DuLieuViMo\GDPChart.ascx" />
+    <Content Include="UserControl\DuLieuViMo\Popup.aspx" />
+    <Content Include="UserControl\DuLieuViMo\SLCNChart.ascx" />
+    <Content Include="UserControl\DuLieuViMo\TMBLChart.ascx" />
+    <Content Include="UserControl\DuLieuViMo\XNKChart.ascx" />
+    <Content Include="UserControl\Footer\ucPartner.ascx" />
+    <Content Include="UserControl\Header\ucChart.ascx" />
+    <Content Include="UserControl\Header\ucHeaderIndex.ascx" />
+    <Content Include="UserControl\Homepage\ucBoxHangHoa.ascx" />
+    <Content Include="UserControl\Homepage\ucBoxTinDoanhNghiep.ascx" />
+    <Content Include="UserControl\KhopLenh\test.aspx" />
+    <Content Include="UserControl\LichSuKien\ChiTietTin.ascx" />
+    <Content Include="UserControl\LichSuKien\LatestEvents.ascx" />
+    <Content Include="UserControl\LichSuKien\LichSuKien_TomTat.ascx" />
+    <Content Include="UserControl\LichSuKien\LichSuKien_TomTat_v2.ascx" />
+    <Content Include="UserControl\LichSuKien\Lich_su_kien.ascx" />
+    <Content Include="UserControl\LichSuKien\Lich_su_kien_v2.ascx" />
+    <Content Include="UserControl\LichSuKien\NewsContent.ascx" />
+    <Content Include="UserControl\LichSuKien\OtherCrawlerNews.ascx" />
+    <Content Include="UserControl\LichSu\CoPhieuQuy.ascx" />
+    <Content Include="UserControl\LichSu\CungCau.ascx" />
+    <Content Include="UserControl\LichSu\GiaoDichNoiBo.ascx" />
+    <Content Include="UserControl\LichSu\GiaoDichNuocNgoai.ascx" />
+    <Content Include="UserControl\NewsTitleHot\ucNewsTitleHot.ascx" />
+    <Content Include="UserControl\Report\AnalyseReportsInHomePage.ascx" />
+    <Content Include="UserControl\Report\AnalyzeReportList.ascx" />
+    <Content Include="UserControl\Screener\ucCafef_Screener.ascx" />
+    <Content Include="UserControl\Screener\ucCafef_ScreenerUserGuide.ascx" />
+    <Content Include="UserControl\StockNewsControl\StockNewsInHomePage.ascx" />
+    <Content Include="UserControl\StockView\ucBanLanhDao.ascx" />
+    <Content Include="UserControl\StockView\ucBanLanhDaoV2.ascx" />
+    <Content Include="UserControl\StockView\ucBaoCaoTaiChinh.ascx" />
+    <Content Include="UserControl\StockView\ucCongTyCon.ascx" />
+    <Content Include="UserControl\StockView\ucThongTinChung.ascx" />
+    <Content Include="UserControl\TienDoBDS\BDSDuanChitiet.ascx" />
+    <Content Include="UserControl\TienDoBDS\BDSDuanThamgia.ascx" />
+    <Content Include="UserControl\TienDoBDS\BDSImages.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="ChartIndex\Images\mobi\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>100</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

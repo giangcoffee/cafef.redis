@@ -1,0 +1,339 @@
+﻿a.symbol,a.symbol:link,a.symbol:active,a.symbol:visited
+{color:#003466;font-weight:700;text-decoration:none;padding:0;/*font-size:11px;margin-right:2px;*/}
+a.symbol:hover
+{color:#CB0003;font-weight:700;text-decoration:none;padding:0;/*font-size:11px;margin-right:2px;*/}
+#cafeftoolbar { margin: 5px 0pt; text-align:center;}
+	#cafeftoolbar a, #cafeftoolbar a:visited {text-decoration: none; color: #000072; padding-right: 5px;}
+.cafefbg {-moz-background-clip: border; -moz-background-origin: padding; -moz-background-size: auto auto;background-attachment: scroll; background-color: transparent; background-image: url("http://cafef3.vcmedia.vn/images/Tooltips/cafef_bg.gif"); background-position: 0 0; background-repeat: repeat-y;}
+.cafecont { padding: 5px 15px; }
+#cf_TipLayer span.span_content{border-top:solid 1px #e6e6e6;}
+#cf_TipLayer span.span_tab{	border-bottom:solid 1px #e6e6e6; text-decoration:none; width:300px;	font-family:Arial;	font-size:11px;	height:35px;}
+#cf_TipLayer span.span_default{	background-color:#e5e5e5; font-family:Arial; font-size:11px; border:solid 1px #e6e6e6; height:35px;}
+#cf_TipLayer span.span_selected{ background-color:#fff; border:solid 1px #e6e6e6; font-family:Arial;	font-size:11px;	border-bottom:solid 1px #fff; height:35px;}
+.toppre { -moz-background-clip: border; -moz-background-origin: padding; -moz-background-size: auto auto;
+ background-attachment: scroll; background-color: transparent; background-image: url("http://cafef3.vcmedia.vn/images/Tooltips/toppre.gif"); background-position: 0 0; background-repeat: no-repeat; line-height: 26px;}
+.cafefoot {
+ -moz-background-clip: border; -moz-background-origin: padding; -moz-background-size: auto auto;
+ background-attachment: scroll; background-color: transparent; background-image: url("http://cafef3.vcmedia.vn/images/Tooltips/cafe_foot.gif"); background-position: 0 0; background-repeat: no-repeat;line-height: 22px;}
+ .sukien_DOANHNGHIEP_link{font-weight: bold;color: #000000;text-decoration: none;font-size: 16px;font-family: Arial;padding-left: 8px;}
+table.CafeF_Paging{border: none;}
+table.CafeF_Paging td{border: solid 1px #dadada;font-weight: bold;color: #cc0000;font-family: Arial;font-size: 12px;padding: 5px;}
+table.CafeF_Paging td a, table.CafeF_Paging td a:link, table.CafeF_Paging td a:active, table.CafeF_Paging td a:visited{font-weight: normal;color: #004370;text-decoration: none;}
+table.CafeF_Paging td a:hover{font-weight: normal;color: #cc0000;text-decoration: none;}
+ div.KenhF_Content_News3 p {margin-top:15px;line-height:20px;}
+.Item_Price1 {border-bottom:1px solid #E6E6E6;border-right:1px solid #E6E6E6;font-size:11px;vertical-align:middle;}
+.Item_DateItem {text-align: center;border-right: solid 1px #E6E6E6;border-bottom: solid 1px #E6E6E6;vertical-align: middle;width: 90px;font-size: 11px;border-left: solid 1px #DADADA;}
+.Header_Price1 {border-right: solid 1px #E6E6E6;border-bottom: solid 1px #E6E6E6;vertical-align: middle;font-size: 12px;text-align: center;}
+.Header_DateItem {border-bottom:1px solid #E6E6E6;border-left:1px solid #DADADA;border-right:1px solid #E6E6E6;font-size:12px;text-align:center;vertical-align:middle;width:90px;}
+.Header_ChangeItem {border-bottom:1px solid #E6E6E6;border-right:1px solid #E6E6E6;font-size:12px;text-align:center;vertical-align:middle;}
+.footerInformDivBoldRed {color:#CC0000;font-family:Arial;font-size:11px;font-style:normal;font-weight:bold;text-align:left;}
+.Note {color:#919191;font-style:italic;font-weight:normal;text-align:left;}
+.btn_Search_Selected{border:none;background-color:#FFF;font-family:Arial;font-size:12px;font-weight:bold;color:Red;cursor:pointer;}
+.btn_Search_Normal{border:none;background-color:#FFF;font-family:Arial;font-size:12px;font-weight:bold;color:#000;cursor:pointer;}
+.Event_Images {background-image: url(http://cafef3.vcmedia.vn/images/images/Home_r35_c23.jpg);background-repeat: no-repeat;background-position: center 5px;width: 20px;}
+#dhtmltooltip
+{border: #666 2px solid;padding: 5px;font-size: 10pt;z-index: 100;-moz-opacity: 0.9;opacity: 0.9;filter: alpha(opacity=90);left: -300px; top:0px;visibility: hidden;font-family: Arial;position: absolute;background-color: lightyellow;width: 760px;height:300px;text-align:left;}
+#dhtmlpointer
+{z-index: 101;left: -300px; top:0px;visibility: hidden;position: absolute;}
+.cms_blue {font-family: Arial;color: #013567;font-size: 16px;font-weight: bold;}
+.DetailSapo {vertical-align: top;font-size: 12pt;font-weight: bold;font-family: Times New Roman;color: #333;}
+/*trang co phieu*/
+.cattitle {font: bold 12px Tahoma, Geneva, sans-serif; color: #666; text-transform: uppercase; border-bottom: 1px solid #eee; padding: 0 0 5px; margin: 8px 0 8px 0;}
+.dulieu {padding: 0 15px 0 0px}
+.dl-title {color: #343434; font-weight:bold; font-size: 17px; border-bottom: 1px solid #eee; position: relative;padding: 10px 0 5px 100px}
+.dlt-ma {border: 1px solid #eee; height: 27px;width:77px; line-height: 27px; text-align: center; position: absolute; left: 12px; bottom: -1px}
+.dl-thongtin {padding: 20px 0}
+	.dlt-left {border-right: 1px solid #eee; width: 358px; float: left;}
+		.dltl-update {width: 150px; float: left; padding: 4px 0; text-align: center;}
+			.dltlu-time {color: #999; font-size: 11px}
+			.dltlu-point {color: #000000;font-size: 27px; font-weight: bold; margin: 30px 0 0}
+			.dltlu-percent {background:url(../images/sprite_ico.png) no-repeat 0 -931px; text-align: left; padding: 2px 0 2px 20px; margin: 10px 0 0 30px}
+			.dltlu-up {background:url(../images/sprite_ico.png) no-repeat 0 -931px; text-align: left; padding: 2px 0 2px 20px; margin: 10px 0 0 30px}
+			.dltlu-down {background: url(../images/Down_h.png) no-repeat 0; text-align: left; padding: 2px 0 2px 20px; margin: 10px 0 0 30px}
+			.dltlu-nochange {background: url(../images/Nochange_h.png) no-repeat 0; text-align: left; padding: 2px 0 2px 20px; margin: 10px 0 0 30px}
+		.dltl-price {width: 175px;padding: 0 0 0 15px; float: left; border-left: 1px solid #eee; font: bold 13px Arial, Helvetica, sans-serif;margin: 0 0 8px}
+			.dltl-price .l {float: left; color: #003366;}
+			.dltl-price .r {float: right; text-align: right; color: #CC0000}
+			.dltl-price li {padding: 3px 0}
+			.dltlnote {color: #999; font-style: italic; font-size: 11px; font-weight: normal; padding: 10px 0}
+		.dltl-other {clear: both; border-top: 1px solid #eee; padding: 8px 0; margin: 0 10px 0 0}
+			.dltl-other li {padding: 3px 0}
+			.dltl-other .l {float: left;width: 218px;}
+			.dltl-other .r {float: right; width: 119px; padding: 0 3px 0 0; text-align: right; font-weight: bold}
+			.dltlonote {font: italic 11px Arial, Helvetica, sans-serif; color: #999; padding: 5px 0}
+				.dltlonote a {color: #999}
+			
+	.dlt-right {width: 272px; float: right; font-size: 11px;}
+		.dothi {text-align: center}
+		.dothi-note {color: #999; padding: 4px 8px}
+		.dltr-l {float: left}
+		.dltr-r {float: right}
+		.dltr-time {text-align: center; color: #006699; padding: 10px 0}
+			.dltr-time strong {font-size: 12px;}
+		.dltr-other div {padding: 3px 0; color: #666}
+	
+.tracuu {border-top: 1px solid #eee; border-bottom: 3px solid #eee; padding: 8px 0; font: bold 12px Tahoma, Geneva, sans-serif}
+	.tracuu a {float: left; background: url(../images/sprite_ico.png) no-repeat 0 -951px; padding: 3px 10px 3px 25px}
+	.tracuu a.tc-ls {border-right: 1px solid #eee}
+	.tracuu a.tc-cd {background-position: 0 -985px; margin: 0 0 0 10px}
+	
+.noborder {border: none}
+.hosocongty {padding: 10px 0}
+.tabs4 {border-bottom: 1px solid #ddd; height: 25px; margin: 0 0 1px; font: bold 11px Tahoma, Geneva, sans-serif}
+	.tabs4 li {height: 24px; line-height: 25px;border: 1px solid #ddd; border-bottom: none; float: left; margin: 0 0 0 8px; font-weight: bold; background: #F2F2F2; padding: 0 12px}
+	.tabs4 li.active {height: 25px;background: #fff;}
+		.tabs4 li a {color: #333;}
+
+	.phanchia {border-bottom: 1px solid #eee; font-weight: bold}
+		.phanchia .l {float: left; padding: 14px 0;}
+			.phanchia .l a {color: #999}
+			.phanchia .l a.active {color: #069} 
+		.phanchia .r {float: right; padding: 6px 0; text-align: right}
+			.phanchia .r span {font-weight: normal}
+	
+	.hosocongty th {border-bottom: 1px solid #eee;border-top: 1px solid #eee; font-size: 11px; font-weight: bold;}
+	.hosocongty td {padding: 0px;}
+		.hosocongty td.col1,
+		.hosocongty th.col1 {text-align: left}
+	.tbheader {background: #F2F2F2; color: #069; font: bold 12px Tahoma, Geneva, sans-serif}
+	.tbheader td {padding: 0; border-top: 1px solid #fff; text-align: left}
+		.tbhl div {background:url(../images/sprite_ico.png) no-repeat 0 -1008px; padding: 5px 5px 5px 10px}
+		.hosocongty td.tbhr {text-align: right; font: bold 11px Arial, Helvetica, sans-serif; color: #999; padding: 5px}
+			.tbhr a {color: #999}
+/*.dulieu-more {border-top: 3px solid #eee; padding: 14px 0}*/
+	.baocaophantich {}
+		.baocaophantich li {background: url(../images/sprite_ico.png) no-repeat 0 -565px; padding: 4px 10px 4px 15px; color: #999}
+		.baocaophantich li a {color: #333}
+		.baocaophantich li a:hover {color: #069}
+	.kehoachkd {}
+		.kehoachkd li {background: url(../images/sprite_ico.png) no-repeat 0 -564px; border-bottom: 1px solid #eee; padding: 5px 10px 4px 15px;}
+		.kehoachkd li .l {float: left}
+		.kehoachkd li .r {float: right; text-align: right}
+/* cong cu du lieu */
+.congcudl {padding: 0 8px 8px 33px; border: 1px solid #EBEBEB; margin: 0 0 14px 0; background: url(../images/sprite.png) #F4F4F4 no-repeat -744px -264px;}
+.congcudl h3 {color: #C00; font: bold 17px Arial, Helvetica, sans-serif; text-transform: uppercase; padding: 17px 15px}
+.congcudl ul {padding: 0 8px 0 0}
+.congcudl li {border-bottom: 1px solid #D6D6D6; padding: 10px 0 10px 18px; background:url(../images/sprite_ico.png) no-repeat 0 -1075px}
+.congcudl li.last {border: none}
+.congcudl li a {font: bold 12px Tahoma, Geneva, sans-serif}
+.congcudl li p {padding: 5px 0 0}
+
+/*lich su kien*/
+.lichsk {padding: 0 8px 0 0}
+.lichsk table {color: #069; border-top: 1px dotted #ccc; margin: 0px 0 0}
+.lichsk table td {border-bottom: 1px dotted #ccc}
+.lsk1,
+.lsk-title1 {width: 46px; background: #F4F4F4; font-weight: bold; padding: 5px 0 5px 4px}
+.lsk2,
+.lsk-title2 {width: 230px; padding: 5px 0 5px 10px}
+.lsk-title2 {font-weight: bold}
+.xemtatca {text-align: right; padding: 10px 0}
+.xemtatca a {background:url(../images/sprite_ico.png) no-repeat right -476px; padding: 0 13px 0 0}
+/* -----------------------------------*/
+/* --------->>> DU LIEU <<<-----------*/
+/* -----------------------------------*/
+.lichsu {margin: 10px 0 0 0; padding: 0; border-bottom: 3px solid #eee}
+.tabs3 {border-bottom: 1px solid #ddd; position: relative; height: 28px; margin: 0 0 1px}
+	.tabs3 li {height: 26px; line-height: 25px; padding: 1px 10px 0; border: 1px solid #ddd; border-bottom: none; float: left; margin: 0 0 0 8px; background: #fff; font-weight: bold}
+	.tabs3 li.active {height: 27px}
+		.tabs3 li.active a {color: #c00;}
+	
+	.lichsu table {font-size: 11px; }
+	.lichsu th {color: #666; font-weight: bold; background: #eee; border-bottom: 1px solid #ddd; border-right: 1px solid #ddd; padding: 8px; text-align: center}
+	.lichsu td {border-right: 1px solid #ddd; padding: 4px 2px}
+	.lichsu .col1 {width: 25px}
+	.lichsu .col2 {width: 135px}
+		.lichsu .col2 .l {float: left; padding: 0 0 0 3px}
+		.lichsu .col2 .r {float: right; text-align: right; padding: 0 14px 0 0}
+		.lichsu .col2 .up {background: url(../images/sprite_ico.png) no-repeat right -877px}
+		.lichsu .col2 .down {background: url(../images/sprite_ico.png) no-repeat right -900px}
+		.lichsu .col2 .nochange {background: url(../images/nochange_.jpg) no-repeat right}
+	.lichsu .col3 {width: 53px; text-align: center}
+	.lichsu .col4 {width: 81px; text-align: right}
+	.lichsu tr.odd td {background: #eee}
+
+.pink {color: #FF00FF}
+.red {color: #CC0000}
+.green {color: #00A500}
+.blue {color: #006699}
+.orange {color: #FF9900}
+
+	.lichsu .xemtiep,
+	.tintucsukien xemtiep {padding-left: 5px}
+	.lichsu .xemtiep a,
+	.tintucsukien .xemtiep2 .xemtiep {float: left;}
+	.lichsu .xemtiep .donvigtgd {float: right; text-align: right; color: #999}
+
+	.tintucsukien {border-bottom: 3px solid #eee; padding: 0 0 10px 20px; margin-top:10px;}
+	.tintucsukien h3,
+	.congtycungnganh h3 {color: #666; font: bold 12px Tahoma, Geneva, sans-serif; text-transform: uppercase; padding: 0 0 4px}
+	.tintucsukien li {background: url(../images/sprite_ico.png) no-repeat 0 -349px; padding: 3px 15px 0; color: #999}
+	.tintucsukien li div {border-bottom: 1px dotted #eee; padding: 0 0 3px}
+	.tintucsukien .xemtiep2 .paging {float: right; text-align: right; clear: none}
+	.loctin {color: #999}
+	.loctin strong {color: #333}
+	.loctin a {color: #999}
+	.loctin a:hover,
+	.loctin a.active {color: #c00}
+
+.congtycungnganh,
+.baocaophantich,
+.kehoachkd {padding: 10px 0 0 0;border-bottom: 3px solid #eee;}
+	.subtitle {font-weight: bold; padding: 4px 0}
+	.congtycungnganh table {font-size: 11px}
+	.congtycungnganh th {background: #eee; border-top: 1px solid #ddd; color: #666; font-weight: bold; padding: 5px 4px}
+	.congtycungnganh td {padding: 4px}
+	.congtycungnganh tr.odd {background: #eee}
+	.congtycungnganh .col1 {width: 34px;}
+	.congtycungnganh .col2 {width: 28px; text-align: right}
+	.congtycungnganh .col3 { width: 50px;text-align: right}
+	.congtycungnganh .col4 {width: 60px;text-align: right}
+	.congtycungnganh .col5 {text-align: right}
+
+	.congtycungnganh .paging,
+	.epspe .paging {background: #eee; text-align: center; padding: 10px; margin: 1px 0 0;line-height:25px}
+	.congtycungnganh .paging a,
+	.epspe .paging a {background: #fff; color: #666; border: 1px solid #ccc; padding: 2px 5px; line-height:150%; display:inline-block; margin-bottom:2px;}
+	.congtycungnganh .paging a:hover,
+	.congtycungnganh .paging a.current,
+	.epspe .paging a:hover,
+	.epspe .paging a.current {background: #d6d6d6; color: #333}
+	.pagingnote {text-align: center; font-size: 11px; color: #666; padding: 3px}
+
+.epspe {padding: 10px 0; font-size:11px;}
+	.epspe table {border: 1px solid #D6D6D6; text-align: right}
+	.epspe th {background: #eee; padding: 5px}
+	.epspe td {border-bottom: 1px solid #d6d6d6;padding: 5px}
+	.epspe tr.odd td {background: #eee;}
+	.epspe td.col1 {width: 38px; text-align: left}
+	.epspe .col2 {width: 40px}
+	.epspe .col3 {width: 50px}
+	.epspe .col4 {width: 50px}
+	.epspe .col5 {}
+	.epspe .paging {background: #fff}
+	.epse-note {color:#999; font-style: italic; font-size: 11px}
+.xemtiep {font: 11px Tahoma, Geneva, sans-serif;padding: 4px 10px 4px 16px}
+	.xemtiep a {background: url(../images/sprite_ico.png) no-repeat right -477px; padding: 0 10px 0 0}
+#sidebar {border-left: dotted 1px #ccc;}
+.CafeF_BanLanhDao {font-family: Arial; font-size: 12px; color: #666666;}
+.CafeF_BanLanhDao th {font-weight: bold;}
+.CafeF_BanLanhDao .BlockTitle {text-align: center; font-weight: bold; color: #004276; background-color: #f2f2f2; border-bottom: solid 1px #dddddd; border-top: solid 1px #c9c9c9; padding: 3px 5px 3px 5px; }
+.CafeF_BanLanhDao .FieldTitle {font-weight: bold; border-bottom: solid 1px #dddddd; text-align:left;}
+.CafeF_BanLanhDao tr.alt td {background-color: #F2F2F2;}
+.BanLanhDaoCoCuSoHuu_Sel{width: 109px; height: 29px; background-image: url('../images/banlanhdao_sohuu_sel.gif'); background-repeat: no-repeat; font-weight: bold; border: none; text-align:center; color: #fff;padding-bottom: 5px; padding-top:5px; cursor: hand; cursor: pointer; vertical-align:middle;}
+.BanLanhDaoCoCuSoHuu_Sel a,.BanLanhDaoCoCuSoHuu_Sel a:link,.BanLanhDaoCoCuSoHuu_Sel a:visited{ font-weight: bold; border: none; text-align:center; color: #fff; cursor: hand; cursor: pointer; vertical-align:middle;}
+.BanLanhDaoCoCuSoHuu_UnSel{	width: 109px; height: 29px; background-image: url('../images/banlanhdao_sohuu_unsel.gif'); background-repeat:repeat-x; font-weight: normal; text-align:center; border: none; color: #727272; padding-bottom: 5px; padding-top:5px; cursor: hand; cursor: pointer; vertical-align:middle;}
+.BanLanhDaoCoCuSoHuu_UnSel a:link,.BanLanhDaoCoCuSoHuu_UnSel a:visited,.BanLanhDaoCoCuSoHuu_UnSel a
+{font-weight: normal; text-align:center; border: none; color: #727272; cursor: hand; cursor: pointer;vertical-align:middle;}
+.treeview, .treeview ul {list-style-image:none;list-style-position:outside;list-style-type:none;margin:0;padding:0;}
+/*trang du-lieu*/
+.cf_WCBox .cf_BoxHeader
+{height:4px;overflow:hidden;background:#fff url(http://cafef3.vcmedia.vn/images/Box_Tin_Doanh_Nghiep/corner_dg_TR.gif) 100% 0 no-repeat;}
+.cf_WCBox .cf_BoxHeader div
+{width:4px;height:4px;overflow:hidden;background:#fff url(http://cafef3.vcmedia.vn/images/Box_Tin_Doanh_Nghiep/corner_dg_TL.gif) 0 0 no-repeat ;float:left}
+.cf_WCBox .cf_BoxContent
+{background:#fff;}
+.cf_WCBox .cf_BoxFooter
+{height:4px;overflow:hidden;background:#fff url(http://cafef3.vcmedia.vn/images/Box_Tin_Doanh_Nghiep/corner_dg_BR.gif) 100% 0 no-repeat;}
+.cf_WCBox .cf_BoxFooter div
+{height:4px;width:4px;overflow:hidden;background:#fff url(http://cafef3.vcmedia.vn/images/Box_Tin_Doanh_Nghiep/corner_dg_BL.gif) 0 0 no-repeat;float:left}
+table.CafeF_TopCompany
+{border: 1px solid #dadada;font-size: 12px;width: 100%;background-color: #fff;font-family: Arial;color: #292929;}
+table.CafeF_TopCompany td.Button
+{text-align: center;height: 24px;cursor: hand;cursor: pointer;font-size: 12px;}
+table.CafeF_TopCompany div#CafeF_BoxChungKhoan_Tab_TangGia td,
+table.CafeF_TopCompany div#CafeF_BoxChungKhoan_Tab_GiamGia td,
+table.CafeF_TopCompany div#CafeF_BoxChungKhoan_Tab_KhoiLuong td,
+table.CafeF_TopCompany div#CafeF_BoxChungKhoan_Tab_TopPE td,
+table.CafeF_TopCompany div#CafeF_BoxChungKhoan_Tab_TopEPS td,
+table.CafeF_TopCompany div#CafeF_BoxChungKhoan_Tab_TopCapital td
+{text-align: right;padding: 5px 4px 5px 4px;}
+table.CafeF_TopCompany div#CafeF_BoxChungKhoan_Tab_TangGia th,
+table.CafeF_TopCompany div#CafeF_BoxChungKhoan_Tab_GiamGia th,
+table.CafeF_TopCompany div#CafeF_BoxChungKhoan_Tab_KhoiLuong th,
+table.CafeF_TopCompany div#CafeF_BoxChungKhoan_Tab_TopPE th,
+table.CafeF_TopCompany div#CafeF_BoxChungKhoan_Tab_TopEPS th,
+table.CafeF_TopCompany div#CafeF_BoxChungKhoan_Tab_TopCapital th
+{text-align: right;color: #004276;border-bottom: solid 1px #dadada;background-color: #f5f5f5;padding: 5px 4px 5px 4px;}
+table.CafeF_TopCompany a,
+table.CafeF_TopCompany a:link,
+table.CafeF_TopCompany a:active,
+table.CafeF_TopCompany a:visited
+{color:#000; text-decoration:none; font-weight: normal;}
+table.CafeF_TopCompany a:hover
+{ color:#CB0003; text-decoration:none; font-weight: normal;}
+table.CafeF_TopCompany a.ButtonActived,
+table.CafeF_TopCompany a.ButtonActived:link,
+table.CafeF_TopCompany a.ButtonActived:active,
+table.CafeF_TopCompany a.ButtonActived:visited,
+table.CafeF_TopCompany a.ButtonActived:hover
+{font-weight: bolder; font-size: 11px; color: #cc0000;}
+table.CafeF_TopCompany a.ButtonInActived,
+table.CafeF_TopCompany a.ButtonInActived:link,
+table.CafeF_TopCompany a.ButtonInActived:active,
+table.CafeF_TopCompany a.ButtonInActived:visited,
+table.CafeF_TopCompany a.ButtonInActived:hover
+{font-weight: normal; font-size: 11px; color: #999999;}
+div#CafeF_DSCongtyNiemyet td
+{font-size: 11px;font-family: Arial;padding-top:5px}
+table.CafeF_ThiTruongNiemYet_ChuCai
+{width:100%;}
+div.cf_BoxContent table.CafeF_ThiTruongNiemYet_ChuCai td
+{vertical-align:middle;text-align: center;border: solid 1px #dadada;}
+div.cf_BoxContent table.CafeF_ThiTruongNiemYet_ChuCai a,
+div.cf_BoxContent table.CafeF_ThiTruongNiemYet_ChuCai a:link,
+div.cf_BoxContent table.CafeF_ThiTruongNiemYet_ChuCai a:active,
+div.cf_BoxContent table.CafeF_ThiTruongNiemYet_ChuCai a:visited
+{color:#000;text-decoration:none;font-size: 12px;font-weight: bold;}
+div.cf_BoxContent table.CafeF_ThiTruongNiemYet_ChuCai a:hover
+{color:#CB0003;text-decoration:none;font-size: 12px;font-weight: bold;}
+div.cf_BoxContent table.CafeF_ThiTruongNiemYet_ChuCai a.Actived,
+div.cf_BoxContent table.CafeF_ThiTruongNiemYet_ChuCai a.Actived:link,
+div.cf_BoxContent table.CafeF_ThiTruongNiemYet_ChuCai a.Actived:active,
+div.cf_BoxContent table.CafeF_ThiTruongNiemYet_ChuCai a.Actived:visited,
+div.cf_BoxContent table.CafeF_ThiTruongNiemYet_ChuCai a.Actived:hover
+{color:#CB0003;text-decoration:none;font-size: 12px;font-weight: bold;}
+div#CafeF_DSCongtyNiemyet a.Actived,
+div#CafeF_DSCongtyNiemyet a.Actived:link,
+div#CafeF_DSCongtyNiemyet a.Actived:active,
+div#CafeF_DSCongtyNiemyet a.Actived:visited
+{font-weight: bold;color: #cc0000;text-decoration: none;font-size:12px;}
+div#CafeF_DSCongtyNiemyet a.Actived:hover
+{font-weight: bold;color: #cc0000;text-decoration: none;font-size:12px;}
+div#CafeF_DSCongtyNiemyet a.InActived,
+div#CafeF_DSCongtyNiemyet a.InActived:link,
+div#CafeF_DSCongtyNiemyet a.InActived:active,
+div#CafeF_DSCongtyNiemyet a.InActived:visited
+{font-weight: bold;color: #333;text-decoration: none;font-size:12px;}
+div#CafeF_DSCongtyNiemyet a.InActived:hover
+{font-weight: bold;color: #333;text-decoration: none;font-size:12px;}
+div.cf_BoxContent td#CafeF_ThiTruongNiemYet_Content th
+{font-weight: bold;background-color: #efefef;text-align: left;}
+div.cf_BoxContent td#CafeF_ThiTruongNiemYet_Content td
+{background-color: #fff;}
+div.cf_BoxContent td#CafeF_ThiTruongNiemYet_Content td.Alternation
+{background-color: #f3f3f3;border-top: solid 1px #e9e9e9;border-bottom: solid 1px #e9e9e9;}
+div.cf_BoxContent td#CafeF_ThiTruongNiemYet_Content a,
+div.cf_BoxContent td#CafeF_ThiTruongNiemYet_Content a:link,
+div.cf_BoxContent td#CafeF_ThiTruongNiemYet_Content a:active,
+div.cf_BoxContent td#CafeF_ThiTruongNiemYet_Content a:visited
+{color:#333;text-decoration:none;font-size: 11px;}
+div.cf_BoxContent td#CafeF_ThiTruongNiemYet_Content a:hover
+{color:#CB0003;text-decoration:none;font-size: 11px;}
+div.cf_BoxContent td#CafeF_ThiTruongNiemYet_Trang a,
+div.cf_BoxContent td#CafeF_ThiTruongNiemYet_Trang a:link,
+div.cf_BoxContent td#CafeF_ThiTruongNiemYet_Trang a:active,
+div.cf_BoxContent td#CafeF_ThiTruongNiemYet_Trang a:visited
+{color:#000;text-decoration:none;}
+div.cf_BoxContent td#CafeF_ThiTruongNiemYet_Trang a:hover
+{color:#CB0003;text-decoration:none;}
+#imgHoChart_Day, #imgHaChart_Day {z-index: 0; margin: 35px 0 20px 20px; width: 260px; height: 165px;}
+/*report detail*/
+#reportdetail{}
+	#reportdetail ul {margin: 5px 0; padding-left:30px;}
+		#reportdetail li {list-style: circle outside none; margin-bottom: 5px;}
+.Index_Up {color: #00cc00;}
+.Index_Down {color: #cc0000;}
+.Index_NoChange {color: #FF9900;}
+.Index_Ceiling {color: #E200FF;}
+.Index_Floor {color: #66CCFF;}

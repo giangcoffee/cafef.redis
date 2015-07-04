@@ -1,0 +1,6 @@
+G:\VC\SourceSafe\CafeF\CafeF.Redis\CafeF.Redis.BL\CafeF.BCTC.DA\bin\Debug\CafeF.BCTC.DA.dll
+G:\VC\SourceSafe\CafeF\CafeF.Redis\CafeF.Redis.BL\CafeF.BCTC.DA\bin\Debug\CafeF.BCTC.DA.pdb
+G:\VC\SourceSafe\CafeF\CafeF.Redis\CafeF.Redis.BL\CafeF.BCTC.DA\bin\Debug\Channelvn.Cached.dll
+G:\VC\SourceSafe\CafeF\CafeF.Redis\CafeF.Redis.BL\CafeF.BCTC.DA\obj\Debug\ResolveAssemblyReference.cache
+G:\VC\SourceSafe\CafeF\CafeF.Redis\CafeF.Redis.BL\CafeF.BCTC.DA\obj\Debug\CafeF.BCTC.DA.dll
+G:\VC\SourceSafe\CafeF\CafeF.Redis\CafeF.Redis.BL\CafeF.BCTC.DA\obj\Debug\CafeF.BCTC.DA.pdb

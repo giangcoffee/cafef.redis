@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{419750C2-E875-470E-977B-2F60796F1168}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CafeF.Redis.BL</RootNamespace>
+    <AssemblyName>CafeF.Redis.BL</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BasicCommonBL.cs" />
+    <Compile Include="BasicInfoBL.cs" />
+    <Compile Include="BCTCBL.cs" />
+    <Compile Include="BondBL.cs" />
+    <Compile Include="BusinessPlanBL.cs" />
+    <Compile Include="CategoryObjectBL.cs" />
+    <Compile Include="CeoBL.cs" />
+    <Compile Include="ChildAndLinkBL.cs" />
+    <Compile Include="CommonInfoBL.cs" />
+    <Compile Include="CompanyProfileBL.cs" />
+    <Compile Include="KeywordBL.cs" />
+    <Compile Include="KhopLenhBL.cs" />
+    <Compile Include="LichSuKienBL.cs" />
+    <Compile Include="PriceRedisBL.cs" />
+    <Compile Include="TienDoBDSBL.cs" />
+    <Compile Include="ProductBox.cs" />
+    <Compile Include="TradeCenterBL.cs" />
+    <Compile Include="DividendHistoryBL.cs" />
+    <Compile Include="FileObjectBL.cs" />
+    <Compile Include="FinanceInfoBL.cs" />
+    <Compile Include="FirstInfoBL.cs" />
+    <Compile Include="ForeignHistoryBL.cs" />
+    <Compile Include="InvestorListBL.cs" />
+    <Compile Include="LeaderAndOwnerBL.cs" />
+    <Compile Include="NewsBL.cs" />
+    <Compile Include="OrderHistoryBL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportsBL.cs" />
+    <Compile Include="StockBL.cs" />
+    <Compile Include="StockHistoryBL.cs" />
+    <Compile Include="UserBL.cs" />
+    <Compile Include="UserCategoryConfigBL.cs" />
+    <Compile Include="Utils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CafeF.Redis.Data\CafeF.Redis.Data.csproj">
+      <Project>{66B2DCFC-B222-4F36-BCDC-BCB602EE2312}</Project>
+      <Name>CafeF.Redis.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CafeF.Redis.Entity\CafeF.Redis.Entity\CafeF.Redis.Entity.csproj">
+      <Project>{4D654B7F-EDE2-4B89-BA42-6BDAE2D15796}</Project>
+      <Name>CafeF.Redis.Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

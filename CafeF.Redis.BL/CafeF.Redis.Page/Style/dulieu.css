@@ -1,0 +1,28 @@
+﻿a.Chart_InActived,a.Chart_InActived:link,a.Chart_InActived:active,a.Chart_InActived:visited
+    {
+	    font-weight:normal;
+	    font-size: 11px;
+	    color: #013567;
+	    font-family:Arial;
+	    text-decoration: none;
+    }
+    a.Chart_InActived:hover
+    {
+	    font-weight:normal;
+	    font-size: 11px;
+	    color: #cc0001;
+	    font-family:Arial;
+	    text-decoration: none;
+    }
+    a.Chart_Actived,a.Chart_Actived:link, a.Chart_Actived:active, a.Chart_Actived:visited, a.Chart_Actived:hover
+    {
+	    font-weight:bold;
+	    font-size: 11px;
+	    color: #cc0001;
+	    font-family:Arial;
+	    text-decoration: none;
+    }
+    .NoteText
+    {
+        color: #999999;
+    }

@@ -1,0 +1,61 @@
+﻿<%@ Import Namespace="CafeF.Redis.BL"%>
+<%@ Master Language="C#" AutoEventWireup="true" Codebehind="StockMain.Master.cs" Inherits="CafeF.Redis.Page.MasterPage.StockMain" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server">
+    <title id="Title" enableviewstate="false" runat="server">Cổng thông tin, dữ liệu tài chính - chứng khoán Việt Nam | CafeF.vn</title>
+    <meta name="Keywords" content="Thông tin tài chính, chứng khoán, bất động sản, kinh tế,  đầu tư, tài chính quốc tế, thông tin doanh nghiệp, lãi suất, tiền tệ, ngân hàng" id="KEYWORDS" runat="server" enableviewstate="false" />
+        <meta name="Description" content="Thông tin thị trường tài chính Việt nam và quốc tế" runat="server" id="description" enableviewstate="false" />
+    <link rel="stylesheet" type="text/css" href="http://cafef3.vcmedia.vn/v2/styles/v2/styles.css" />
+    <link rel="stylesheet" type="text/css" href="http://cafef3.vcmedia.vn/v2/style/solieu.v2.css" />
+    <link rel="stylesheet" type="text/css" href="http://cafef3.vcmedia.vn/v2/style/stockbar.v2.css" />
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" type="text/css" href="http://cafef3.vcmedia.vn/v2/styles/v2/ie6.css" />
+    <![endif]-->
+    <!--[if IE 7]>
+    <link rel="stylesheet" type="text/css" href="http://cafef3.vcmedia.vn/v2/styles/v2/ie7.css" />
+    <![endif]-->
+    <link href="http://cafef3.vcmedia.vn/v2/styles/tooltip.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="http://cafef3.vcmedia.vn/images/iconcafef.ico?1" />
+   <script type="text/javascript">var servertime = parseFloat('<%= DateTime.Now.ToString("HHmmss") %>'); var _symbol = '<%= Request.Url.ToString().ToLower().Contains("dulieu.aspx")?(Request["symbol"]??""):"" %>'; var domain = ""; var rewrite = true;</script>
+    <script src="http://cafef3.vcmedia.vn/v2/scripts/cafef.v2.js" type="text/javascript"></script>
+    <script src='http://cafef3.vcmedia.vn/v2/kby/<%= Utils.GetKbyFolder() %>kby.js' type="text/javascript"></script>
+    <%--<script src="/Scripts/HeaderScript.js" type="text/javascript"></script>
+    <script src='http://cafef3.vcmedia.vn/js/AutoComplete/laixuatnganhang.js' type="text/javascript"></script>
+    <script type="text/javascript" src="http://cafef3.vcmedia.vn/js/cometd/org/cometd.js"></script>
+    <script type="text/javascript" src="http://cafef3.vcmedia.vn/js/cometd/org/cometd/AckExtension.js"></script>
+    <script type="text/javascript" src="http://cafef3.vcmedia.vn/js/cometd/org/cometd/ReloadExtension.js"></script>
+    <script type="text/javascript" src="http://cafef3.vcmedia.vn/js/cometd/jquery/jquery.json-2.2.js"></script>
+    <script type="text/javascript" src="http://cafef3.vcmedia.vn/js/cometd/jquery/jquery.cookie.js"></script>
+    <script type="text/javascript" src="http://cafef3.vcmedia.vn/js/cometd/jquery/jquery.cometd.js"></script>
+    <script type="text/javascript" src="http://cafef3.vcmedia.vn/js/cometd/jquery/jquery.cometd-reload.js"></script>
+    <script src="/Scripts/THEO_DOI_CHUNG_KHOAN.js" type="text/javascript"></script>--%>
+    <script type="text/javascript" src="http://cafef3.vcmedia.vn/v2/scripts/cafef.header.cometd.solieu.js"></script>
+    <script type="text/javascript" src="http://cafef3.vcmedia.vn/v2/scripts/cometd.framework.js"></script>
+    <script type="text/javascript" src="http://cafef3.vcmedia.vn/v2/scripts/THEO_DOI_CHUNG_KHOAN.js"></script>
+    <script type="text/javascript" src="http://cafef3.vcmedia.vn/v2/scripts/inlinestockpage.3.js"></script>
+    <!--[if lte IE 6]>
+    <script type="text/javascript" src="http://cafef3.vcmedia.vn/v2/ie/iepngfix_tilebg.js"></script> 
+    <![endif]-->
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>        
+    </form>
+    <script type="text/javascript">
+        MenuActive(1000);
+    </script>
+    <script src="http://cafef3.vcmedia.vn/v2/scripts/footer.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    var pageTracker = _gat._getTracker("UA-3070916-9");
+    pageTracker._trackPageview();
+    </script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4D654B7F-EDE2-4B89-BA42-6BDAE2D15796}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CafeF.Redis.Entity</RootNamespace>
+    <AssemblyName>CafeF.Redis.Entity</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BasicCommon.cs" />
+    <Compile Include="BasicInfo.cs" />
+    <Compile Include="BCTC.cs" />
+    <Compile Include="Bond.cs" />
+    <Compile Include="BusinessPlan.cs" />
+    <Compile Include="CategoryObject.cs" />
+    <Compile Include="Ceo.cs" />
+    <Compile Include="CeoAsset.cs" />
+    <Compile Include="CeoNews.cs" />
+    <Compile Include="CeoPosition.cs" />
+    <Compile Include="CeoProcess.cs" />
+    <Compile Include="CeoRelation.cs" />
+    <Compile Include="CeoSchool.cs" />
+    <Compile Include="ChildAndLink.cs" />
+    <Compile Include="CommonInfo.cs" />
+    <Compile Include="CompanyProfile.cs" />
+    <Compile Include="AgreementHistory.cs" />
+    <Compile Include="LichSuKien.cs" />
+    <Compile Include="SessionPriceData.cs" />
+    <Compile Include="TienDoBDS.cs" />
+    <Compile Include="FinanceReport.cs" />
+    <Compile Include="MajorOwner.cs" />
+    <Compile Include="ProductBox.cs" />
+    <Compile Include="StockCeo.cs" />
+    <Compile Include="StockPrice.cs" />
+    <Compile Include="StockShortInfo.cs" />
+    <Compile Include="TradeCenter.cs" />
+    <Compile Include="TypeNews.cs" />
+    <Compile Include="DividendHistory.cs" />
+    <Compile Include="FileObject.cs" />
+    <Compile Include="FinanceInfo.cs" />
+    <Compile Include="FirstInfo.cs" />
+    <Compile Include="ForeignHistory.cs" />
+    <Compile Include="InvestorList.cs" />
+    <Compile Include="Leader.cs" />
+    <Compile Include="StockNews.cs" />
+    <Compile Include="OrderHistory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports.cs" />
+    <Compile Include="Stock.cs" />
+    <Compile Include="StockHistory.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="UserCategoryConfig.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

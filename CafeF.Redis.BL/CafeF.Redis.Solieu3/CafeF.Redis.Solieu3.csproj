@@ -1,0 +1,210 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{30576A2F-4F01-465C-BD2D-9607D583814B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CafeF.Redis.Solieu3</RootNamespace>
+    <AssemblyName>CafeF.Redis.Solieu3</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL" />
+    <Reference Include="ServiceStack.Client, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="ServiceStack.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="ServiceStack.Interfaces, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="ServiceStack.Messaging, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="ServiceStack.Text, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions.Design, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\BaseHandler.cs" />
+    <Compile Include="Common\AllowChartRequest.cs" />
+    <Compile Include="Common\HandlerFactory.cs" />
+    <Compile Include="Common\HandlerMapping.cs" />
+    <Compile Include="Common\Lib.cs" />
+    <Compile Include="Handlers\MarketHandler.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ProxyHandler.ashx.cs">
+      <DependentUpon>ProxyHandler.ashx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ProxyHandler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="HandlerMapping\HandlerMapping.config" />
+    <Content Include="Public\js\jquery.js" />
+    <Content Include="Public\js\Library.js" />
+    <Content Include="www\cafef\BANG_GIA_RUT_GON.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logs\log.txt" />
+    <Content Include="www\cafef\BAI_VIET_HAY.js" />
+    <Content Include="www\cafef\bang_gia_rut_gon.html" />
+    <Content Include="www\cafef\BANG_GIA_RUT_GON_test.js" />
+    <Content Include="www\cafef\CHI_SO_CHUNG_KHOAN.js" />
+    <Content Include="www\cafef\CONG_TY_CUNG_NGANH.js" />
+    <Content Include="www\cafef\CONG_TY_CO_PE_TUONG_DUONG.js" />
+    <Content Include="www\cafef\CONG_TY_CO_EPS_TUONG_DUONG.js" />
+    <Content Include="www\cafef\css\Copy of cafef.css" />
+    <Content Include="www\cafef\script.html" />
+    <Content Include="www\cafef\test.htm" />
+    <Content Include="www\cafef\TOP_5_CO_PHIEU.js" />
+    <Content Include="www\cafef\css\cafef.css" />
+    <Content Include="www\cafef\GIA_VANG.js" />
+    <Content Include="www\cafef\DANH_SACH_CONG_TY_NIEM_YET.js" />
+    <Content Include="www\cafef\DOANH_NGHIEP_NIEM_YET_WithoutFrame.js" />
+    <Content Include="Public\js\jqDnR.js" />
+    <Content Include="Public\js\jquery.autocomplete2.js" />
+    <Content Include="Public\js\jquery.bgiframe.min.js" />
+    <Content Include="Public\js\jquery.dimensions.js" />
+    <Content Include="www\cafef\SAN_GIAO_DICH_VANG_ACB.js" />
+    <Content Include="www\cafef\THEO_DOI_CHUNG_KHOAN.js" />
+    <Content Include="www\cafef\TOP_10_CONG_TY.js" />
+    <Content Include="www\cafef\TOP_10_CO_PHIEU.js" />
+    <Content Include="www\cafef\TY_GIA_NGOAI_TE.js" />
+    <Content Include="www\cafef\_DANH_SACH_CONG_TY_NIEM_YET.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DLL\CafefShareMemory.dll" />
+    <Content Include="DLL\Cafef_BO.dll" />
+    <Content Include="DLL\Enyim.Caching.dll" />
+    <Content Include="DLL\KenhF.Common.dll" />
+    <Content Include="DLL\log4net.dll" />
+    <Content Include="DLL\MemcachedProviders.dll" />
+    <Content Include="DLL\netchartdir.dll" />
+    <Content Include="DLL\ServiceStack.Client.dll" />
+    <Content Include="DLL\ServiceStack.Common.dll" />
+    <Content Include="DLL\ServiceStack.Interfaces.dll" />
+    <Content Include="DLL\ServiceStack.Messaging.dll" />
+    <Content Include="DLL\ServiceStack.Text.dll" />
+    <Content Include="HandlerMapping\AllowChartRequest.config" />
+    <Content Include="viewstate.aspx" />
+    <Content Include="www\cafef\BAI_VIET_HAY_demo.js" />
+    <Content Include="www\cafef\DOANH_NGHIEP_NIEM_YET.js" />
+    <Content Include="www\cafef\HANG_HOA_NGUYEN_LIEU.js" />
+    <Content Include="www\cafef\TY_GIA_NGOAI_TE_WithoutFrame.js" />
+    <Content Include="www\cafef\_CHI_SO_CHUNG_KHOAN.js" />
+    <Content Include="www\cafef_cms\cms_test.htm" />
+    <Content Include="www\cafef_cms\popup_topsymbols.htm" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CafeF.Redis.BL\CafeF.Redis.BL.csproj">
+      <Project>{419750C2-E875-470E-977B-2F60796F1168}</Project>
+      <Name>CafeF.Redis.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CafeF.Redis.BO\CafeF.Redis.BO.csproj">
+      <Project>{A87E0E6F-8DD7-4F3C-94F9-6788FA72226B}</Project>
+      <Name>CafeF.Redis.BO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CafeF.Redis.Data\CafeF.Redis.Data.csproj">
+      <Project>{66B2DCFC-B222-4F36-BCDC-BCB602EE2312}</Project>
+      <Name>CafeF.Redis.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CafeF.Redis.Entity\CafeF.Redis.Entity\CafeF.Redis.Entity.csproj">
+      <Project>{4D654B7F-EDE2-4B89-BA42-6BDAE2D15796}</Project>
+      <Name>CafeF.Redis.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ServiceStack.Redis\ServiceStack.Redis.csproj">
+      <Project>{AF99F19B-4C04-4F58-81EF-B092F1FCC540}</Project>
+      <Name>ServiceStack.Redis</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Public\images\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" Condition="" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>8084</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:8081</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

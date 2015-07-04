@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CeoNote.ascx.cs" Inherits="CafeF.Redis.Page.UserControl.Ceo.CeoNote" %>
+<div style="border-top: 1px solid #D6D6D6; padding: 5px 0 10px 5px; margin-bottom: 10px; width:100%;"><div style="float:right; color: #777;"><i>(<span style="color:Red">*</span>) Tính theo giá cập nhật đến <asp:Literal runat="server" ID="ltrTradeDate" /></i></div></div>

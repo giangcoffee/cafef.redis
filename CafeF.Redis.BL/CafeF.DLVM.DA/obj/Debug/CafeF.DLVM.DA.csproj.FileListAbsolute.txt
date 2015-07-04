@@ -1,0 +1,15 @@
+G:\VC\SourceSafe\CafeF\CafeF.Redis\CafeF.Redis.BL\CafeF.DLVM.DA\bin\Debug\CafeF.DLVM.DA.dll
+G:\VC\SourceSafe\CafeF\CafeF.Redis\CafeF.Redis.BL\CafeF.DLVM.DA\bin\Debug\CafeF.DLVM.DA.pdb
+G:\VC\SourceSafe\CafeF\CafeF.Redis\CafeF.Redis.BL\CafeF.DLVM.DA\bin\Debug\CafeF.Redis.Data.dll
+G:\VC\SourceSafe\CafeF\CafeF.Redis\CafeF.Redis.BL\CafeF.DLVM.DA\bin\Debug\Channelvn.Cached.dll
+G:\VC\SourceSafe\CafeF\CafeF.Redis\CafeF.Redis.BL\CafeF.DLVM.DA\bin\Debug\Channelvn.Enyim.Caching.dll
+G:\VC\SourceSafe\CafeF\CafeF.Redis\CafeF.Redis.BL\CafeF.DLVM.DA\bin\Debug\Channelvn.MemcachedProviders.dll
+G:\VC\SourceSafe\CafeF\CafeF.Redis\CafeF.Redis.BL\CafeF.DLVM.DA\bin\Debug\MemcachedProviders.dll
+G:\VC\SourceSafe\CafeF\CafeF.Redis\CafeF.Redis.BL\CafeF.DLVM.DA\bin\Debug\ServiceStack.Interfaces.dll
+G:\VC\SourceSafe\CafeF\CafeF.Redis\CafeF.Redis.BL\CafeF.DLVM.DA\bin\Debug\ServiceStack.Redis.dll
+G:\VC\SourceSafe\CafeF\CafeF.Redis\CafeF.Redis.BL\CafeF.DLVM.DA\bin\Debug\ServiceStack.Common.dll
+G:\VC\SourceSafe\CafeF\CafeF.Redis\CafeF.Redis.BL\CafeF.DLVM.DA\bin\Debug\ServiceStack.Text.dll
+G:\VC\SourceSafe\CafeF\CafeF.Redis\CafeF.Redis.BL\CafeF.DLVM.DA\bin\Debug\ServiceStack.Messaging.dll
+G:\VC\SourceSafe\CafeF\CafeF.Redis\CafeF.Redis.BL\CafeF.DLVM.DA\obj\Debug\ResolveAssemblyReference.cache
+G:\VC\SourceSafe\CafeF\CafeF.Redis\CafeF.Redis.BL\CafeF.DLVM.DA\obj\Debug\CafeF.DLVM.DA.dll
+G:\VC\SourceSafe\CafeF\CafeF.Redis\CafeF.Redis.BL\CafeF.DLVM.DA\obj\Debug\CafeF.DLVM.DA.pdb

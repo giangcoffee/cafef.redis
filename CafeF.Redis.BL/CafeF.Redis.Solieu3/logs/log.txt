@@ -1,0 +1,92 @@
+Object reference not set to an instance of an object.
+Object reference not set to an instance of an object.
+Object reference not set to an instance of an object.
+Object reference not set to an instance of an object.
+Object reference not set to an instance of an object.
+Object reference not set to an instance of an object.
+Object reference not set to an instance of an object.
+Object reference not set to an instance of an object.
+Object reference not set to an instance of an object.
+Object reference not set to an instance of an object.
+Top10CP_XMLData
+Top10CP: 10 Items
+Top10CP_XMLData
+Top10CP: 10 Items
+Top10CP_XMLData
+Top10CP: 10 Items
+Top10CP_XMLData
+Top10CP: 10 Items
+Top10CP_XMLData
+Top10CP: 10 Items
+Top10CP_XMLData
+Top10CP: 10 Items
+Top10CP_XMLData
+Top10CP: 10 Items
+Top10CP_XMLData
+Top10CP: 10 Items
+Top10CP_XMLData
+Top10CP: 10 Items
+Top10CP_XMLData
+Top10CP: 10 Items
+Top10CP_XMLData
+Top10CP: 10 Items
+Top10CP_XMLData
+Top10CP: 10 Items
+Top10CP: 10 Items
+Top10CP: 10 Items
+Top10CP: 10 Items
+Top10CP: 10 Items
+Top10CP: 10 Items
+Top10CP: 10 Items
+Top10CP: 10 Items
+Top10CP: 10 Items
+Top10CP: 10 Items
+Top10CP: 10 Items
+Top10CP: 10 Items
+Top10CP: 10 Items
+Top10CP: 10 Items
+Top10CP: 10 Items
+Top10CP: 10 Items
+Top10CP: 10 Items
+Top10CP: 10 Items
+Top10CP: 10 Items
+Top10CP: 10 Items
+Top10CP: 10 Items
+Top10CP: 10 Items
+Top10CP: 10 Items
+Top10CP: 10 Items
+Top10CP: 10 Items
+Top10CP: 10 Items
+Top10CP: 10 Items
+Top10CP: 10 Items
+An error has occurred while establishing a connection to the server.  When connecting to SQL Server 2005, this failure may be caused by the fact that under the default settings SQL Server does not allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, SqlConnection owningObject)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnection owningObject)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(String host, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, Int64 timerStart)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at CafeF_EmbedData.Handlers.MarketHandler.StockSymbol_FullDynamicData.GetDatabaseState(Int32& currentHOChangeId, Int32& currentHAChangeId, Boolean& isHOChange, Boolean& isHAChange) in D:\Running projects\VC Corporation\CafeF\CafeF_EmbedData\CafeF_EmbedData\Handlers\MarketHandler.cs:line 3011
+   at CafeF_EmbedData.Handlers.MarketHandler.StockSymbol_FullDynamicData.GetCurrentData(TradeCenter tradeCenter, String symbols, Int32 full) in D:\Running projects\VC Corporation\CafeF\CafeF_EmbedData\CafeF_EmbedData\Handlers\MarketHandler.cs:line 2662
+Object reference not set to an instance of an object.
+   at CafeF_EmbedData.Handlers.MarketHandler.StockSymbol_FullDynamicData.GetCurrentData(TradeCenter tradeCenter, String symbols, Int32 full) in D:\Running projects\VC Corporation\CafeF\CafeF_EmbedData\CafeF_EmbedData\Handlers\MarketHandler.cs:line 2679
+Object reference not set to an instance of an object.
+   at CafeF_EmbedData.Handlers.MarketHandler.StockSymbol_FullDynamicData.GetCurrentData(TradeCenter tradeCenter, String symbols, Int32 full) in D:\Running projects\VC Corporation\CafeF\CafeF_EmbedData\CafeF_EmbedData\Handlers\MarketHandler.cs:line 2679
+Object reference not set to an instance of an object.
+   at CafeF_EmbedData.Handlers.MarketHandler.StockSymbol_FullDynamicData.GetCurrentData(TradeCenter tradeCenter, String symbols, Int32 full) in D:\Running projects\VC Corporation\CafeF\CafeF_EmbedData\CafeF_EmbedData\Handlers\MarketHandler.cs:line 2679
+Object reference not set to an instance of an object.
+   at CafeF_EmbedData.Handlers.MarketHandler.StockSymbol_FullDynamicData.GetCurrentData(TradeCenter tradeCenter, String symbols, Int32 full) in D:\Running projects\VC Corporation\CafeF\CafeF_EmbedData\CafeF_EmbedData\Handlers\MarketHandler.cs:line 2679
+Object reference not set to an instance of an object.
+   at CafeF_EmbedData.Handlers.MarketHandler.StockSymbol_FullDynamicData.GetCurrentData(TradeCenter tradeCenter, String symbols, Int32 full) in D:\Running projects\VC Corporation\CafeF\CafeF_EmbedData\CafeF_EmbedData\Handlers\MarketHandler.cs:line 2679

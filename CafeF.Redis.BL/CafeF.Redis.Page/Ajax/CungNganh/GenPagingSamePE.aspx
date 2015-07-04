@@ -1,0 +1,2 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="GenPagingSamePE.aspx.cs" Inherits="CafeF.Redis.Page.Ajax.CungNganh.GenPagingSamePE" %>
+<div class="paging" id="paging" runat="server"></div><div class="pagingnote" id="pagingnoteepspe">Trang 1/<%=TotalPage%>(Tổng số <%=TotalItem%> công ty)</div><input type="hidden" id="txtTotalItemPE" value='<%=TotalItem%>' enableviewstate=false /><input type="hidden" id="txtTotalPagePE" value='<%=TotalPage%>' enableviewstate=false />

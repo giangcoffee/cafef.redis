@@ -1,0 +1,236 @@
+﻿#macktheodoi ul#stockbar li {
+    background-position: -88px -105px; padding-left: 0; text-align: center; width: 84px;
+}
+table#CafeF_StockSymbolSlideTable {
+    background-color: #FFFFFF; width: 100%;
+}
+div#macktheodoi td.Left_Right {
+    background-color: #DADADA; border: medium none; width: 6px;
+}
+div#macktheodoi .Button {
+    cursor: pointer; text-align: center; width: 18px;
+}
+div#macktheodoi img {
+    border: 0 none; cursor: pointer; vertical-align: baseline;
+}
+div#macktheodoi div.FloatLeft {
+    float: left; margin-bottom: 3px; margin-left: 3px; overflow: hidden;
+}
+div#macktheodoi div.FloatRight {
+    float: right; font-size: 10px; margin-right: 3px; overflow: hidden; text-align: right;
+}
+div#macktheodoi td.RightBorder {
+    border-right: 1px solid #C4C4C4;
+}
+div#macktheodoi span.Up {
+    color: #009900;
+}
+div#macktheodoi span.Down {
+    color: #CC0000;
+}
+div#macktheodoi span.NoChange {
+    color: #D0AD08;
+}
+div#macktheodoi span.Ceiling {
+    color: #E200FF;
+}
+div#macktheodoi span.Floor {
+    color: #3987AE;
+}
+div#macktheodoi div.Price {
+    color: #666666;
+    font-size: 11px;
+    font-weight: 700;
+    text-align: left;
+}
+div#macktheodoi div.HiddenText {
+    color: #DDDDDD;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+}
+div#macktheodoi a, div#macktheodoi a:link, div#macktheodoi a:active, div#macktheodoi a:visited {
+    color: #003466;
+    font-size: 11px;
+    font-weight: 700;    
+    margin: 2px 8px 0 3px;    
+    padding: 0;
+    text-decoration: none;
+}
+div#macktheodoi a:hover {
+    color: #CB0003;
+    font-size: 11px;
+    font-weight: 700;
+    margin-right: 8px;
+    padding: 0;
+    text-decoration: none;
+}
+#macktheodoi {
+    background: url("http://cafef3.vcmedia.vn/v2/images/v2/bgtdmck.gif") no-repeat scroll 0 0 #FFF;
+    height: 43px;    
+    position: relative;
+    width: 980px;
+    margin-bottom:8px;
+}
+#macktheodoi .prev, #macktheodoi .next {
+    background: url("http://cafef3.vcmedia.vn/v2/images/sprite.png") no-repeat scroll 0 -106px transparent;
+    display: block;
+    height: 39px;
+    left: 0;
+    position: absolute;
+    text-indent: -500em;    
+    width: 21px;
+}
+
+#macktheodoi ul {
+    left: 24px;
+    position: absolute;
+    top: 2px;
+}
+.manager {    
+    font: bold 11px Tahoma,Geneva,sans-serif;
+    height: 27px;
+    padding: 10px 0 0 18px;
+    position: absolute;
+    right: 0;    
+    width: 76px;
+}
+.manager span {
+    background: url("http://cafef3.vcmedia.vn/v2/images/sprite.png") no-repeat scroll -209px -111px transparent;
+    height: 11px;
+    position: absolute;
+    right: 19px;
+    text-indent: -500em;
+    top: 9px;
+    width: 11px;
+}
+#macktheodoi ul#stockbar li {
+    background-position: -88px -105px;
+    padding-left: 0;
+    text-align: center;
+    width: 84px;
+    margin-top:0px;
+}
+
+#macktheodoi li.wait {
+    color: #D6D6D6;
+    cursor: pointer;
+    font: 11px Tahoma,Geneva,sans-serif;
+    padding: 6px 0 0 29px;
+    width: 91px;
+}
+
+#macktheodoi li {    
+    float: left;
+    height: 33px;
+    border-right: 1px dotted #D6D6D6;
+}
+#macktheodoi .next {
+    background-position: -31px -106px;
+    left: 870px;
+}
+div#macktheodoi div.FloatLeft {
+    float: left;
+    margin-bottom: 3px;
+    margin-left: 3px;
+    overflow: hidden;
+}
+div#macktheodoi div.Price {
+    color: #666666;
+    font-size: 11px;
+    font-weight: 700;
+    text-align: left;
+    padding-left:5px
+}
+td#CafeF_StockSymbolSlideTable_Cell0, td#CafeF_StockSymbolSlideTable_Cell1, td#CafeF_StockSymbolSlideTable_Cell2, td#CafeF_StockSymbolSlideTable_Cell3, td#CafeF_StockSymbolSlideTable_Cell4, td#CafeF_StockSymbolSlideTable_Cell5, td#CafeF_StockSymbolSlideTable_Cell6 {
+    padding: 2px;
+    width: 115px;
+}
+td#CafeF_StockSymbolSlideTable_Cell0 td, td#CafeF_StockSymbolSlideTable_Cell1 td, td#CafeF_StockSymbolSlideTable_Cell2 td, td#CafeF_StockSymbolSlideTable_Cell3 td, td#CafeF_StockSymbolSlideTable_Cell4 td, td#CafeF_StockSymbolSlideTable_Cell5 td, td#CafeF_StockSymbolSlideTable_Cell6 td {
+    border: medium none;
+}
+#CafeF_StockSymbolSlidePopup {
+    background-color: #FFFFFF;
+    border: 1px solid #CF0D0E;
+    display: none;
+    height: 300px;
+    left: 500px;
+    position: absolute;
+    width: 260px;
+    z-index: 1000;
+}
+#CafeF_StockSymbolSlidePopup .PopupRow {
+    margin: 2px 5px;
+    overflow: auto;
+}
+#CafeF_StockSymbolSlidePopupTitle {
+    color: #343434;
+    cursor: move;
+    float: left;
+    font-size: 12px;
+}
+#CafeF_StockSymbolSlidePopupTitle div {
+    overflow: hidden;
+}
+#CafeF_StockSymbolSlidePopupList {
+    font-size: 11px;
+    overflow: auto;
+}
+#CafeF_StockSymbolSlidePopupList td {
+    font-size: 11px;
+}
+.ac_results {
+    background-color: #DADADA;
+    border-bottom: 1px solid Gray;
+    border-left: 1px solid Gray;
+    border-right: 1px solid Gray;
+    margin-top: 0;
+    overflow: visible;
+    padding: 0;
+    position: absolute;
+    z-index: 1001;
+}
+.ac_results ul {
+    list-style: none outside none;
+    margin: 0;
+    overflow: visible;
+    padding: 0;
+    width: 100%;
+}
+.ac_results ul em {
+    color: Red;
+    font-style: normal;
+    font-weight: bold;
+}
+.ac_results li {
+    cursor: pointer;
+    display: block;
+    font-size: 13px;
+    line-height: 130%;
+    margin: 0;
+    overflow: visible;
+    padding: 2px 5px;
+    text-align: left;
+}
+.ac_loading {
+    background: url("indicator.gif") no-repeat scroll right center window;
+}
+.ac_over {
+    background-color: #E7E7E7;
+    color: #000000;
+}
+.ac_moreItems {
+    -moz-user-select: none;
+    background-color: inactivecaption;
+    color: inactivecaptiontext;
+    cursor: default;
+    display: block;
+    font-family: Tahoma;
+    margin: 0;
+    overflow: hidden;
+    padding: 0 5px;
+    text-align: center;
+    width: 100%;
+}

@@ -1,0 +1,12 @@
+User-Agent: *
+Disallow: /Comments/
+Disallow: /CafeF-Tools/
+Disallow: /FinanceStatementData/
+Disallow: /BannerSlide/
+Disallow: /App_Themes/
+Disallow: /Charts/
+Disallow: /Documents/
+Disallow: /FinanceRealtimeData/
+Disallow: /pages/comment.aspx
+Allow: /
+Sitemap: http://cafef.vn/sitemap/news.chn

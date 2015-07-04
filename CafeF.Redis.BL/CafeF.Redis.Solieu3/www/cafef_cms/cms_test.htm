@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Untitled Page</title>
+    <script type="text/javascript">
+    function OpenPopupTopSymbols()
+    {
+        window.open('popup_topsymbols.htm');
+    }
+    function InsertTopSymbols(data, method)
+    {
+        if (method == 'Inline')
+        {
+            document.getElementById('divResult').innerHTML = data;
+        }
+        else
+        {
+            var json = eval(data);
+            
+            if (json.Updated != '')
+            {
+                document.getElementById('divResult').innerHTML = 'File name is ' + json.Updated;
+            }
+            else
+            {
+                document.getElementById('divResult').innerHTML = 'Can not write a file';
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+<a href="javascript:OpenPopupTopSymbols();">Thêm danh sách top cổ phiếu</a>
+<div id="divResult"></div>
+</body>
+</html>

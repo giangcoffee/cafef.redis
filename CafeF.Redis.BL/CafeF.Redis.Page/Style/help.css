@@ -1,0 +1,37 @@
+﻿.dxncItemHeadernews{color:#004370;line-height:17px;text-align:left;font-family:Arial;font-size:13px;font-weight:bold;text-decoration:none}
+.dxncItemHeadernews:hover{color:#cc0001;line-height:17px;text-align:left;font-family:Arial;font-size:13px;font-weight:bold;text-decoration:none}
+.dxncItemDate_news{font-family:Arial;font-size:10px;color: Gray;white-space: nowrap;}
+.dxncItemContent_news{font: 12px Arial;color: #343434;padding-left:0px;text-decoration:none;text-align:justify	}  
+.dxncItemContentOthernews{font: 12px Arial;color:#004276;padding-left:0px;text-decoration:none	} 
+.dxncItemContentOthernews:hover{font: 12px Arial;color:	 #cc0001;padding-left:0px;text-decoration:none	} 
+.sukien_DOANHNGHIEP_link{font-weight: bold;color: #000000;text-decoration: none;font-size: 16px;font-family: Arial;text-align:left;text-align:left}
+.F_text_listbai {color:#004295;text-decoration: none;font-size:12px;font-weight:normal;padding-left:0px;margin:0px 0px 0px 0px ;text-align:left;font-family:Arial;}
+.F_text_listbai:hover {color:#cc0001;text-decoration: none;font-size:12px;font-weight:normal;padding-left:0px;margin:0px 0px 0px 0px ;text-align:left;font-family:Arial;}
+.dxpButton_Link{font: 8pt Tahoma;color: #394EA2;text-decoration: underline;white-space: nowrap;text-align: center;vertical-align: middle;cursor:pointer;}
+.dxncItemTail_news{
+	font-size: 11px;
+	font-weight: normal;
+	color: #c60000;
+	text-decoration: none;
+	padding:0px 0px 0px 0px;
+	background-image:url(http://cafef3.vcmedia.vn/images/images/more1.jpg);
+	background-repeat:no-repeat;
+	background-position:center;
+	width:18px;
+	height:12px;
+}
+.dxncItemTail_news a:hover {
+	font-size: 11px;
+	font-weight: normal;
+	color: #c60000;
+	text-decoration: none;
+	padding:0px 0px 0px 0px;
+	background-image:url(http://cafef3.vcmedia.vn/images/images/more2.jpg);
+	background-repeat:no-repeat;
+	background-position:center;
+	width:18px;
+	height:12px;
+}
+.ol{}
+	.ol li{margin-bottom:4px;}
+.helpstyle3 {margin: 6px 0pt 6px 5px; }

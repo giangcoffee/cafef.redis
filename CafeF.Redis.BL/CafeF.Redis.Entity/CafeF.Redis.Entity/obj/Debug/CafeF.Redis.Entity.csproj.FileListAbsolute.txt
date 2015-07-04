@@ -1,0 +1,5 @@
+G:\VC\SourceSafe\CafeF\CafeF.Redis\CafeF.Redis.BL\CafeF.Redis.Entity\CafeF.Redis.Entity\bin\Debug\CafeF.Redis.Entity.dll
+G:\VC\SourceSafe\CafeF\CafeF.Redis\CafeF.Redis.BL\CafeF.Redis.Entity\CafeF.Redis.Entity\bin\Debug\CafeF.Redis.Entity.pdb
+G:\VC\SourceSafe\CafeF\CafeF.Redis\CafeF.Redis.BL\CafeF.Redis.Entity\CafeF.Redis.Entity\obj\Debug\ResolveAssemblyReference.cache
+G:\VC\SourceSafe\CafeF\CafeF.Redis\CafeF.Redis.BL\CafeF.Redis.Entity\CafeF.Redis.Entity\obj\Debug\CafeF.Redis.Entity.dll
+G:\VC\SourceSafe\CafeF\CafeF.Redis\CafeF.Redis.BL\CafeF.Redis.Entity\CafeF.Redis.Entity\obj\Debug\CafeF.Redis.Entity.pdb

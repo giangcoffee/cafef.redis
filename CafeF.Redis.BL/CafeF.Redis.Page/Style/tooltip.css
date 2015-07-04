@@ -1,0 +1,115 @@
+.tt {
+  font-size: .9em;
+  font-style:italic;
+  font-weight: normal;
+  text-decoration:none;
+  text-align: left;
+}
+.tt span { display: none;}
+/*background:; ie hack, something must be changed in a for ie to execute it*/
+.tt:link {color : #003366;
+text-decoration : none;
+font-family : tahoma, verdana, arial;
+font-size : 11px;}
+.tt:hover {   position:relative;text-decoration:none; z-index:24; color: #aaaaff; background:transparent;color : #003c5e;
+text-decoration : none;
+font-family : tahoma, verdana, arial;
+font-size : 11px;}
+.tt:hover span.tooltip {
+  color: #111;
+  display:block;
+  position:absolute;
+  top:0px; left:-15px;
+  padding: 15px 0 0 0;
+  width:300px;
+  text-align: left;
+  text-decoration:none;
+  z-index: -1;
+  color : #343434;
+font-family : tahoma, verdana, arial;
+font-size : 11px;
+}
+/*.tt.rightEnd:hover span.tooltip {
+	right: -20px; left: auto;
+}*/
+
+.tt:hover span.top {
+  display: block;
+  padding: 30px 8px 0;
+  background: url(images/bubble.png) no-repeat top;
+}
+/*.tt.rightEnd:hover span.top {
+	background: url(images/bubble-right.png) no-repeat top;
+}*/
+.tt:hover span.middle { /* different middle bg for stretch */
+  display: block;
+  padding: 0px 12px 10px 8px;
+  font-style:normal; 
+  text-align:justify;
+  background: url(images/bubble_filler.png) repeat bottom;
+}
+.tt:hover span.bottom {
+	display: block;
+	padding:3px 8px 10px;
+	color:#343434;
+	font-size:10px;
+	font-style:italic;
+	font-weight:normal;
+  background: url(images/bubble.png) no-repeat bottom;
+}
+
+
+
+.tt div 
+{
+	display: none;
+}
+/*background:; ie hack, something must be changed in a for ie to execute it*/
+
+.tt:hover {   position:relative;text-decoration:none; z-index:24; color: #aaaaff; background:transparent;color : #003c5e;
+text-decoration : none;
+font-family : tahoma, verdana, arial;
+font-size : 11px;}
+.tt:hover div.tooltip {
+  color: #111;
+  display:block;
+  position:absolute;
+  top:0px; left:-10px;
+  padding: 15px 0 0 0;
+  width:300px;
+  text-align: left;
+  text-decoration:none;
+  z-index: -1;
+  color : #343434;
+font-family : tahoma, verdana, arial;
+font-size : 11px;
+}
+/*.tt.rightEnd:hover div.tooltip {
+	right: -20px; left: auto;
+}*/
+
+.tt:hover div.top {
+  display: block;
+  padding: 30px 8px 0;
+  background: url(images/bubble.png) no-repeat top;
+}
+/*.tt.rightEnd:hover div.top {
+	background: url(images/bubble-right.png) no-repeat top;
+}*/
+.tt:hover div.middle { /* different middle bg for stretch */
+  display: block;
+  padding: 0px 12px 10px 8px;
+  font-style:normal; 
+  text-align:justify;
+  font-size:11px;
+  background: url(images/bubble_filler.png) repeat bottom;
+}
+.tt:hover div.bottom {
+	display: block;
+	padding:3px 8px 10px;
+	color:#343434;
+	font-size:10px;
+	font-style:italic;
+	font-weight:normal;
+  background: url(images/bubble.png) no-repeat bottom;
+}

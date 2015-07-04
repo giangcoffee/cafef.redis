@@ -1,0 +1,42 @@
+﻿<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="CACHE-CONTROL" content="NO-CACHE" />
+    <script type="text/javascript" src="http://cafef.vn/Scripts/AutoComplete/kby.js?12123"></script>
+    <script type="text/javascript" src="http://cafef.vn/Scripts/Library.js?upd=26881135"></script>
+</head>
+<body>
+<script type="text/javascript">
+var rootDirectory = 'http://solieu.cafef.vn/www/cafef/';
+var scripts = new Array();
+scripts[0] = 'BANG_GIA_RUT_GON_test.js';
+scripts[1] = '_CHI_SO_CHUNG_KHOAN.js';
+scripts[2] = 'CONG_TY_CO_EPS_TUONG_DUONG.js';
+scripts[3] = 'CONG_TY_CO_PE_TUONG_DUONG.js';
+scripts[4] = 'CONG_TY_CUNG_NGANH.js';
+scripts[5] = 'DANH_SACH_CONG_TY_NIEM_YET.js';
+scripts[6] = 'DOANH_NGHIEP_NIEM_YET.js';
+scripts[7] = 'GIA_VANG.js';
+scripts[8] = 'SAN_GIAO_DICH_VANG_ACB.js';
+scripts[9] = 'THEO_DOI_CHUNG_KHOAN.js';
+scripts[10] = 'TOP_10_CO_PHIEU.js';
+scripts[11] = 'TOP_10_CONG_TY.js';
+scripts[12] = 'TOP_5_CO_PHIEU.js';
+scripts[13] = 'TY_GIA_NGOAI_TE_test.js';
+
+var params = CafeF_JSLibrary.QueryString('params');
+if (params != '')
+{
+    var divs = params.split(';');
+    var currentDate = new Date();
+    for (var i = 0; i < divs.length; i++)
+    {
+        if (!isNaN(divs[i]))
+        {
+            CafeF_JSLibrary.CreateScriptObject(rootDirectory + scripts[parseInt(divs[i])] + '?udt=' + currentDate.toDateString() + currentDate.toTimeString());
+        }
+    }
+}
+</script>
+</body>
+</html>

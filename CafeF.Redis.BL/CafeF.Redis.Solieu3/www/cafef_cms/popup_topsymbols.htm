@@ -1,0 +1,429 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Untitled Page</title>
+    <link type="text/css" rel="stylesheet" href="http://cafef.vn/Styles/cafef.css?ASASKKFDS" />
+    <link type="text/css" rel="stylesheet" href="http://cafef.vn/Styles/NewsDetailCss.css?newsday" />
+    <link type="text/css" rel="stylesheet" href="http://cafef.vn/Styles/cafef.css?ASASKKFDS" />
+    <script src="http://cafef.vn/Scripts/Library.js?upd=28881135" type="text/javascript"></script>
+    <script src="http://cafef.vn/Scripts/AutoComplete/kby.js?update30092008" type="text/javascript"></script>
+    
+    <script language="javascript" type="text/javascript">
+    // <!CDATA[
+    function CafeF_TopStockSymbol(instanceName, containerId)
+    {
+        //this.host = 'http://solieu.cafef.vn';
+        this.host = 'http://localhost:8081';
+        this.script_folder = 'http://solieu.cafef.vn/www/cafef/';
+        this.script_object = null;
+        this.instance_name = instanceName;
+        this.Fields = {'Quantity':0,'Price':1,'Change':2,'ChangePercent':3,'ChangeValue':4};
+        this.LoadingImage = '<div align="center"><img src="http://solieu.cafef.vn/www/cafef/images/loading.gif" /></div>';
+        this.ContainerId = containerId;
+        
+        this.Type = 0;
+        this.TradeCenter = 0;
+        this.TopSymbol = 0;
+        this.NumberOfSession = 0;
+        this.Session = 0;
+        this.DateTime = 0;
+        this.Align = 'left';
+        
+        this.LoadData = function(type, tradeCenter, topSymbol, topSession, session, date, align)
+        {
+            this.Type = type;
+            this.TradeCenter = tradeCenter;
+            this.TopSymbol = topSymbol;
+            this.NumberOfSession = topSession;
+            this.Session = session;
+            this.DateTime = date;
+            this.Align = align;
+        
+            var url = '';
+            
+            if (topSession == -1)
+            {
+                url = this.host + '/ProxyHandler.ashx?RequestName=TopStockSymbolForCMSInSession&CallBack=' + this.instance_name + '.OnLoaded&RequestType=json&Type=' + this.Type + '&TradeCenter=' + this.TradeCenter + '&TopSymbol=' + this.TopSymbol + '&Session=' + this.Session + '&Date=' + this.DateTime;
+            }
+            else
+            {
+                url = this.host + '/ProxyHandler.ashx?RequestName=TopStockSymbolForCMS&CallBack=' + this.instance_name + '.OnLoaded&RequestType=json&Type=' + this.Type + '&TradeCenter=' + this.TradeCenter + '&TopSymbol=' + this.TopSymbol + '&TopSession=' + this.NumberOfSession;
+            }
+            this.CreateScriptObject(url);
+        }
+
+        this.OnLoaded = function(data, methodName)
+        {
+            var json = eval(data);
+            var output = '';
+            
+            output  = '<table rules="all" align="' + this.Align + '" style="border: solid 1px #dadada; border-collapse: collapse;" cellpadding="5" cellspacing="0">';
+            if (this.NumberOfSession == 0 || this.NumberOfSession == -1)
+            {
+                output += '<tr style="background-color: #eeeeee;"><th style="text-align: left;">Mã CK</th><th>Khối lượng</th><th>Giá</th><th>+/-</th></tr>';
+            }
+            else
+            {
+                output += '<tr style="background-color: #eeeeee;"><th style="text-align: left;">Mã CK</th><th>Giá hiện tại</th><th>Thay đổi</th></tr>';
+            }
+            var isAlternation = false;
+            for (var i = 0; i < json.TopSymbols.Symbols.length; i++)
+            {
+                output += '<tr' + (isAlternation ? ' style="background-color: #f9f9f9;"' : '') + '>';
+                output += '<td style="text-align:left;"><a target="_blank" href="http://cafef.vn' + CafeF_JSLibrary.GetCompanyInfoLink(json.TopSymbols.Symbols[i].Symbol) + '">' + json.TopSymbols.Symbols[i].Symbol + '</a></td>';
+                if (this.NumberOfSession == 0 || this.NumberOfSession == -1)
+                {
+                    output += '<td style="text-align:right;">' + this.FormatNumber(json.TopSymbols.Symbols[i].Datas[this.Fields.Quantity]) + '</td>';
+                    output += '<td style="text-align:right;">' + this.FormatNumber(json.TopSymbols.Symbols[i].Datas[this.Fields.Price]) + '</td>';
+                    output += '<td style="text-align:right;">' + this.FormatChangeValue(json.TopSymbols.Symbols[i].Datas[this.Fields.Change], json.TopSymbols.Symbols[i].Datas[this.Fields.ChangePercent]) + '</td>';
+                }
+                else
+                {
+                    output += '<td style="text-align:right;">' + this.FormatNumber(json.TopSymbols.Symbols[i].Datas[this.Fields.Price]) + '</td>';
+                    if (this.Type == 2)
+                    {
+                        output += '<td style="text-align:right;">' + this.FormatNumber(json.TopSymbols.Symbols[i].Datas[this.Fields.ChangeValue]) + '</td>';
+                    }
+                    else
+                    {
+                        output += '<td style="text-align:right;">' + this.FormatChangeValue(json.TopSymbols.Symbols[i].Datas[this.Fields.ChangeValue]) + '</td>';
+                    }
+                }
+                output += '</tr>';
+                isAlternation = !isAlternation;
+            }
+            output += '</table>';
+            
+            document.getElementById(this.ContainerId).innerHTML = output;
+        }
+        
+        this.WriteTopSymbolInSession = function(callBack)
+        {
+            var url = this.host + '/ProxyHandler.ashx?RequestName=WriteTopStockSymbolForCMSInSession&CallBack=' + callBack + '&RequestType=json&Type=' + this.Type + '&TradeCenter=' + this.TradeCenter + '&TopSymbol=' + this.TopSymbol + '&Session=' + this.Session + '&Date=' + this.DateTime;
+            
+            this.CreateScriptObject(url);
+        }
+        
+        this.OnUpdated = function(data, methodName)
+        {
+            var json = eval(data);
+            if (json.Updated != '')
+            {
+                
+            }
+        }
+        
+        this.GetCurrentHtml = function()
+        {
+            return document.getElementById(this.ContainerId).innerHTML;
+        }
+        
+        this.CreateScriptObject = function(src)
+        {
+            if (this.script_object != null)
+	        {
+		        this.RemoveScriptObject();
+	        }
+        	
+	        this.script_object = document.createElement('script');
+
+            this.script_object.setAttribute('type','text/javascript');
+            this.script_object.setAttribute('src', src);
+            
+            var head = document.getElementsByTagName('head')[0];
+            head.appendChild(this.script_object);
+            // setTimeout(this.instance_name + '.AppendScript()', 100);
+        }
+        
+    //    this.AppendScript = function()
+    //    {
+    //        var head = document.getElementsByTagName('head')[0];
+    //        head.appendChild(this.script_object);
+    //    }
+
+        this.RemoveScriptObject = function()
+        {
+	        this.script_object.parentNode.removeChild(this.script_object) ;
+	        this.script_object = null ;
+        }
+        
+        this.FormatChangeValue = function(value, percent)
+        {
+            var output = '';
+            var temp = value + '';
+            if (temp.indexOf('text_color_green') >= 0 || temp.indexOf('text_color_red') >= 0 || temp.indexOf('text_color_yellow') >= 0)
+            {
+                output = temp;
+            }
+            else
+            {
+                if (value > 0)
+                {
+                    output = '<span style="color: #008000">+' + this.FormatNumber(value) + (percent ? '(+' + this.FormatNumber(percent) + '%)' : '') + '</span>';
+                }
+                else if (value < 0)
+                {
+                    output = '<span style="color: #cc0000">' + this.FormatNumber(value) + (percent ? '(' + this.FormatNumber(percent) + '%)' : '') + '</span>';
+                }
+                else
+                {
+                    output = '<span style="color: #ff9900">0' + (percent ? '(0%)' : '') + '</span>';
+                }
+            }
+            return output;
+        }
+
+        this.FormatNumber = function(value, displayZero)
+        {
+            if (value == '') return (displayZero ? '0' : '');
+            try
+            {
+                var temp = value + '';
+                temp = temp.replace(',', '');
+                var number = parseFloat(temp);
+                value = this.FormatNumber1(number, 2, '.', ',');
+                return (value);
+            }
+            catch (err)
+            {
+                return (displayZero ? '0' : '');
+            }
+        }
+
+        this.FormatNumber1 = function(number, decimals, decimalSeparator, thousandSeparator) 
+        {
+            var number = number.toFixed(decimals);
+            
+            var temp = number.toString();
+            
+            var f = temp.substr(temp.length - decimals, decimals);
+            
+            while (f != '' && f.charAt(f.length - 1) == '0') f = f.substr(0, f.length - 1);
+            
+            if (f != '') f = decimalSeparator + f;
+            
+            var t = temp.substr(0, temp.length - 3);
+            
+            if (thousandSeparator != '' && t.length > 3) 
+	        {
+		        h = t;
+		        t = '';
+        		
+		        for (j = 3; j < h.length; j += 3) 
+		        {
+			        i = h.slice(h.length - j, h.length - j + 3);
+			        t = thousandSeparator + i +  t + '';
+		        }
+        		
+		        j = h.substr(0, (h.length % 3 == 0) ? 3 : (h.length % 3));
+		        t = j + t;
+	        }
+        	
+	        temp = t + f;
+        	
+            return temp;
+        }
+    }
+
+    var objTopStockSymbol = new CafeF_TopStockSymbol('objTopStockSymbol', 'tdPreview');
+
+    function btnPreview_onclick()
+    {
+        var objType = document.getElementById('selType');                       var type = objType.options[objType.selectedIndex].value;
+        var objTradeCenter = document.getElementById('selTradeCenter');         var tradeCenter = objTradeCenter.options[objTradeCenter.selectedIndex].value;
+        var objNumberOfSymbols = document.getElementById('selNumberOfSymbols'); var numberOfSymbols = objNumberOfSymbols.options[objNumberOfSymbols.selectedIndex].value;
+        var objTradeSession = document.getElementById('selTradeSession');       var tradeSession = objTradeSession.options[objTradeSession.selectedIndex].value;
+        var objAlign = document.getElementById('selAlign');                     var align = objAlign.options[objAlign.selectedIndex].value;
+        var objSession = document.getElementById('selSession');                 var session = objSession.options[objSession.selectedIndex].value;
+        var objDate = document.getElementById('selDate');                       var date = objDate.options[objDate.selectedIndex].value;
+        
+        objTopStockSymbol.LoadData(type, tradeCenter, numberOfSymbols, tradeSession, session, date, align);
+        
+        return false;
+    }
+
+    function btnInsert_onclick()
+    {
+        if (objTopStockSymbol.NumberOfSession == -1)
+        {
+            objTopStockSymbol.WriteTopSymbolInSession('window.opener.InsertTopSymbols');
+        }
+        else
+        {
+            window.opener.InsertTopSymbols(objTopStockSymbol.GetCurrentHtml(), 'Inline');
+        }
+        return false;
+    }
+
+    function InitDate()
+    {
+        var objDate = document.getElementById('selDate');
+
+        if (!objDate) return;
+    
+        var numberOfDate = 5;
+        
+        var dayOfWeek = new Array('Chủ nhật', 'Thứ hai', 'Thứ ba' ,'Thứ tư' , 'Thứ năm', 'Thứ sáu', 'Thứ bẩy');
+        var StockTrading_DayOfWeek = ',1,2,3,4,5,';
+        var objDate = document.getElementById('selDate');
+        var currentDate = new Date();
+        var dateCount = 0;
+        while (dateCount < numberOfDate)
+        {
+            if (StockTrading_DayOfWeek.indexOf(',' + currentDate.getDay() + ',') >= 0)
+            {
+                var day = (currentDate.getDate() < 10 ? '0' : '') + currentDate.getDate();
+                var month = (currentDate.getMonth() + 1 < 10 ? '0' : '') + (currentDate.getMonth() + 1);
+                var year = currentDate.getFullYear();
+                
+                var newDay = document.createElement("option");
+                newDay.text = dayOfWeek[currentDate.getDay()] + ', ' + day + '/' + month + '/' + year;
+                newDay.value = day + month + year;
+                
+                try
+                {
+                    objDate.add(newDay, null);
+                }
+                catch(ex)
+                {
+                    objDate.add(newDay);
+                }
+                dateCount++;
+            }
+            currentDate.setDate(currentDate.getDate() - 1);
+        }
+    }
+    
+    function ChangeTradeSession(obj)
+    {
+        if (obj.value == '-1')
+        {
+            document.getElementById('selDate').disabled = '';
+            document.getElementById('selSession').disabled = '';
+        }
+        else
+        {
+            document.getElementById('selDate').disabled = 'disabled';
+            document.getElementById('selSession').disabled = 'disabled';
+        }
+    }
+
+    // ]]>
+    </script>
+</head>
+<body onload="InitDate();">
+
+<table border="0" cellpadding="5" cellspacing="0">
+    <tr>
+        <td valign="top">
+            <table border="0" cellpadding="0" cellspacing="3">
+                <tr>
+                    <td>
+                        Lại box nhúng</td>
+                </tr>
+                <tr>
+                    <td>
+                        <select id="selType">
+                            <option selected="selected" value="0">Các CP tăng giá nhiều nhất</option>
+                            <option value="1">Các CP giảm giá nhiều nhất</option>
+                            <option value="2">Các CP giao dịch nhiều nhất</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Sàn giao dịch</td>
+                </tr>
+                <tr>
+                    <td>
+                        <select id="selTradeCenter">
+                            <option selected="selected" value="0">Toàn bộ</option>
+                            <option value="1">HoSE</option>
+                            <option value="2">HaSTC</option>
+                            <option></option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Số lượng mã CP</td>
+                </tr>
+                <tr>
+                    <td>
+                        <select id="selNumberOfSymbols">
+                            <option selected="selected" value="5">5 mã</option>
+                            <option value="10">10 mã</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Thời điểm giao dịch</td>
+                </tr>
+                <tr>
+                    <td>
+                        <select id="selTradeSession" onchange="ChangeTradeSession(this);">
+                            <option selected="selected" value="0">Hiện tại</option>
+                            <option value="5">5 phiên gần đây</option>
+                            <option value="10">10 phiên gần đây</option>
+                            <option value="-1">Theo ngày</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Ngày lấy dữ liệu</td>
+                </tr>
+                <tr>
+                    <td>
+                        <select id="selDate" disabled="disabled">
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Phiên giao dịch</td>
+                </tr>
+                <tr>
+                    <td><select id="selSession" disabled="disabled">
+                        <option selected="selected" value="1">Kết thúc phiên 1</option>
+                        <option value="2">Kết thúc phiên 2</option>
+                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Căn vị trí</td>
+                </tr>
+                <tr>
+                    <td>
+                        <select id="selAlign">
+                            <option selected="selected" value="left">Trái</option>
+                            <option value="right">Phải</option>
+                            <option value="center">Giữa</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input id="btnPreview" type="button" value="Xem trước" onclick="return btnPreview_onclick()" />
+                    </td>
+                </tr>
+            </table>
+        </td>
+        <td valign="top">
+            <table border="0" cellpadding="0" cellspacing="3">
+                <tr>
+                    <td id="tdPreview">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input id="btnInsert" type="button" value="Thêm vào bài" onclick="return btnInsert_onclick()" /></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
